@@ -21,18 +21,18 @@ $text = array(
     "Lang" => "en",
 
 // 2. Navegador
-	"Services" => "Services",
-	"Pricing" => "Pricing",
-	"Contact" => "Contact",
+    "Services" => "Services",
+    "Pricing" => "Pricing",
+    "Contact" => "Contact",
     "Login" => "Login",
     "English" => "English",
     "Espanyol" => "Español",
 
 // 3. Portada
-	"Titol" => "Monitoring your buildings",
-	"Subtitol-primer" => "Control is a safe value. ",
-	"Subtitol-segon" => "Mesural is designed to sleep well.",
-	"Sign up now" => "Sign up now",
+    "Titol" => "Monitoring your buildings",
+    "Subtitol-primer" => "Control is a safe value. ",
+    "Subtitol-segon" => "Mesural is designed to sleep well.",
+    "Sign up now" => "Sign up now",
 
 // 4. Mesural Capsule
     "Mesural Capsule" => "Mesural Capsule",
@@ -42,13 +42,13 @@ $text = array(
     "Paragraf capsule" => "Te resultará totalmente familiar y totalmente revolucionario. Crea las mejores soluciones constructivas con la tranquilidad en todo momento. Presentamos la posibilidad de innovar bajo control.",
 
     "Our system" => "How does it work",
-	"Titol 1" => "Installation",
+    "Titol 1" => "Installation",
     "Descripcio 1" => "Install our sensors in the structure of your buildings",
-	"Titol 2" => "Database",
+    "Titol 2" => "Database",
     "Descripcio 2" => "We receive in our servers the structural behaivor data",
-	"Titol 3" => "Algorythm",
+    "Titol 3" => "Algorythm",
     "Descripcio 3" => "We apply engineering to transform the data into simple graphics",
-	"Titol 4" => "Verification",
+    "Titol 4" => "Verification",
     "Descripcio 4" => "We offer the structural verification of your building in real time",
 
 // 5. Temps real i remot

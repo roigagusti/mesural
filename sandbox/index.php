@@ -27,8 +27,8 @@ include_once("sections/visitors.php");
 	<link href="css/mesural/knowledge.css" rel="stylesheet" type="text/css" media="all" />	
  	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	<!-- CSS custom -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/theme-mesural.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/footer.css" rel="stylesheet" type="text/css" />	
 	<link href="css/pricing.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/responsive.css" rel="stylesheet" type="text/css" media="all" />
@@ -72,7 +72,7 @@ include_once("sections/visitors.php");
 			<hr></hr>
 
 			<section>
-				<div class="container">
+				<div class="container center">
 					<h2>Mesural Capsule</h2>
 					<h3>The only thing that change is everything</h3>
 					<a href="#">More information</a>

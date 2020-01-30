@@ -10,9 +10,18 @@
 Taula de continguts
 -------------------
 
-1. Services
+1. Capsule
+2. Services
 
-
+/* ---------- 1. Capsule ---------- */
+.container h2{
+	font-size: 30px
+	text-rendering: optimizeLegibility;
+	font-weight: 400;
+}
+.center{
+	text-align: center;
+}
 /* ---------- 1. Services ---------- */
 .service-icon{
 	height:100px;

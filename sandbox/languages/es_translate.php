@@ -29,10 +29,10 @@ $text = array(
     "Espanyol" => "Español",
 
 // 3. Portada
-	"Titol" => "Monitoriza tus edificios",
+    "Titol" => "Monitoriza tus edificios",
     "Subtitol-primer" => "El  control es un valor seguro. ",
     "Subtitol-segon" => "Mesural nace para dormir tranquilo.",
-	"Sign up now" => "Regístrate ahora",
+    "Sign up now" => "Regístrate ahora",
 
 // 4. Mesural Capsule
     "Mesural Capsule" => "Mesural Capsule",
@@ -42,14 +42,14 @@ $text = array(
     "Paragraf capsule" => "Te resultará totalmente familiar y totalmente revolucionario. Crea las mejores soluciones constructivas con la tranquilidad en todo momento. Presentamos la posibilidad de innovar bajo control.",
     
     "Our system" => "¿Cómo funciona?",
-	"Titol 1" => "Instalación",
-	"Descripcio 1" => "Instala nuestros sensores de comportamiento en la estructura de tus edificios",
-	"Titol 2" => "Base de datos",
-	"Descripcio 2" => "Recibimos en nuestros servidores los datos del comportamiento estructural",
-	"Titol 3" => "Algoritmo",
-	"Descripcio 3" => "Aplicamos ingeniería para transformar los datos en gráficos sencillos",
-	"Titol 4" => "Comprobación",
-	"Descripcio 4" => "Te ofrecemos la verificación estructural de tu edificio a tiempo real",
+    "Titol 1" => "Instalación",
+    "Descripcio 1" => "Instala nuestros sensores de comportamiento en la estructura de tus edificios",
+    "Titol 2" => "Base de datos",
+    "Descripcio 2" => "Recibimos en nuestros servidores los datos del comportamiento estructural",
+    "Titol 3" => "Algoritmo",
+    "Descripcio 3" => "Aplicamos ingeniería para transformar los datos en gráficos sencillos",
+    "Titol 4" => "Comprobación",
+    "Descripcio 4" => "Te ofrecemos la verificación estructural de tu edificio a tiempo real",
 
 // 5. Temps real i remot
     "Now and remotely" => "Now and remotely",
