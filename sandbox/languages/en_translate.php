@@ -51,7 +51,12 @@ $text = array(
 	"Titol 4" => "Verification",
     "Descripcio 4" => "We offer the structural verification of your building in real time",
 
-// 5. App process
+// 5. Temps real i remot
+    "Now and remotely" => "Now and remotely",
+    "Subtitle remot" => "On construction, at the office, at home: in the same way and on real time",
+    "Paragraf remot 1" => "Imagina, crea, modifica en tiempo real. Nunca ha sido tan fácil tomar decisiones del mismo modo en la obra que desde el sofá de tu casa.",
+    "Paragraf remot 2" => "Tú decides cómo te ayudamos. Deja que la Cápsula de Mesural haga el resto.",
+
     "Etapa. Titol 1" => "Supervision and verification in real time",
     "Etapa. Descripcio 1" => "Through our software, your team can monitor that the building behaves as planned. From the control panel we know the loads and deformations of the building: in real time and from previous situations. We also offer standard or customized control rules to be notify the different agents at any deviation.",
     "Etapa. Titol 2" => "Remote monitoring",

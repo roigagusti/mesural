@@ -34,7 +34,13 @@ $text = array(
     "Subtitol-segon" => "Mesural nace para dormir tranquilo.",
 	"Sign up now" => "Regístrate ahora",
 
-// 4. How to
+// 4. Mesural Capsule
+    "Mesural Capsule" => "Mesural Capsule",
+    "Subtitle capsule" => "The only thing that change is everything",
+    "More information" => "More information",
+    "Buy" => "Buy",
+    "Paragraf capsule" => "Te resultará totalmente familiar y totalmente revolucionario. Crea las mejores soluciones constructivas con la tranquilidad en todo momento. Presentamos la posibilidad de innovar bajo control.",
+    
     "Our system" => "¿Cómo funciona?",
 	"Titol 1" => "Instalación",
 	"Descripcio 1" => "Instala nuestros sensores de comportamiento en la estructura de tus edificios",
@@ -45,7 +51,12 @@ $text = array(
 	"Titol 4" => "Comprobación",
 	"Descripcio 4" => "Te ofrecemos la verificación estructural de tu edificio a tiempo real",
 
-// 5. App process
+// 5. Temps real i remot
+    "Now and remotely" => "Now and remotely",
+    "Subtitle remot" => "On construction, at the office, at home: in the same way and on real time",
+    "Paragraf remot 1" => "Imagina, crea, modifica en tiempo real. Nunca ha sido tan fácil tomar decisiones del mismo modo en la obra que desde el sofá de tu casa.",
+    "Paragraf remot 2" => "Tú decides cómo te ayudamos. Deja que la Cápsula de Mesural haga el resto.",
+
     "Etapa. Titol 1" => "Supervisión y verificación en tiempo real",
     "Etapa. Descripcio 1" => "A través de nuestro software tu equipo puede supervisar que el edificio monitorizado se comporte tal como se ha previsto. Desde el panel de control conocemos el estado de cargas y las deformaciones del edificio en cualquier momento: en tiempo real y de situaciones anteriores. Además ofrecemos reglas de control estándar o personalizadas para que ante cualquier desviación prevista se notifique a los agentes deseados.",
     "Etapa. Titol 2" => "Monitorización de forma remota",
