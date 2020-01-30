@@ -34,7 +34,13 @@ $text = array(
 	"Subtitol-segon" => "Mesural is designed to sleep well.",
 	"Sign up now" => "Sign up now",
 
-// 4. How to
+// 4. Mesural Capsule
+    "Mesural Capsule" => "Mesural Capsule",
+    "Subtitle capsule" => "The only thing that change is everything",
+    "More information" => "More information",
+    "Buy" => "Buy",
+    "Paragraf capsule" => "Te resultará totalmente familiar y totalmente revolucionario. Crea las mejores soluciones constructivas con la tranquilidad en todo momento. Presentamos la posibilidad de innovar bajo control.",
+
     "Our system" => "How does it work",
 	"Titol 1" => "Installation",
     "Descripcio 1" => "Install our sensors in the structure of your buildings",
