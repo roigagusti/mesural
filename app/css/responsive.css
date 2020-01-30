@@ -1,0 +1,64 @@
+/*
+* Title: Responsive
+* Author: Aldasoro
+* Template: Masala Personal
+* Version: 1.0
+* Copyright 2018 Masala Consultancy Engineering
+* www: http://www.masalaconsultors.com
+* mail: info masalaconsultors.com
+
+
+Taula de continguts
+-------------------
+
+ 1.Medium devices
+ 2.Small devices
+ 3Semi small devices
+ 4.Exra small devices
+
+
+/* ---------- 1. Medium devices --------- */
+@media (max-width: 1350px) {
+	.lateral{
+		width:7%;
+	}
+	.board{
+		width:93%;
+	}
+}
+
+/* ---------- 2. Small devices ---------- */
+@media (max-width: 991px) {
+	.lateral{
+		width:10%;
+	}
+	.board{
+		width:90%;
+	}
+}
+
+/* ---------- 3. Semi small devices ---------- */
+@media (max-width: 650px) {
+	.lateral{
+		display:none;
+	}
+	.board{
+		width:100%;
+	}
+	.new{
+		text-align: center;
+	}
+}
+
+/* ---------- 4. Extra small devices ---- */
+@media (max-width: 468px) {
+    .logo{
+        margin-bottom:25px;
+    }
+    .logo img{
+        width:240px;
+    }  
+	.new input{
+		text-align: center;
+	}
+}
