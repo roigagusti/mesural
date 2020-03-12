@@ -1,0 +1,44 @@
+/* ------------- 7. Footer ------------ */
+.footer{
+    width: 100%;
+    background: #000;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 300;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer ul{
+    list-style: none;
+}
+.footer a{
+    color: #969696;
+}
+.titol{
+    margin-bottom: 12px;
+}
+.titol a{
+    color: #fff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.description{
+    display: block;
+    color: #6e6e6e;
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-left: 20px;
+}
+.footer a:hover, .titol a:hover{
+    color: #a00000;
+}
+.cookies{
+    color: #969696;
+    text-align: center;
+    padding-top: 50px;
+}
+.copyright{
+    color: #969696;
+    text-align: center;
+    padding-top: 20px;
+}

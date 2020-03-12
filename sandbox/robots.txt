@@ -1,0 +1,6 @@
+# robots.txt for https://www.mesural.com/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mesural.com/sitemap.xml

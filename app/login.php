@@ -6,18 +6,19 @@
   <?php include_once("sections/metadata.php"); ?>
 
   <!-- Títol i Favicons -->
-  <title>Login | Mesural</title>
+  <title>Mesural | Login</title>
   <link rel="shortcut icon" href="img/favicon.ico">
 
-  <!-- CSS basics -->
-  <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-	<!-- CSS custom -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
-	<!-- Google Fonts -->
+  <!-- CSS Libraries -->
+  <!-- CSS Custom -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
+
+  <!-- Scripts Libraries -->
+  <!-- Scripts custom -->
 </head>
 
-<body>
+<body class="access">
 <?php include_once("sections/analytics.php") ?>
 <!-- Contingut de pàgina -->
 <div class="limiter">

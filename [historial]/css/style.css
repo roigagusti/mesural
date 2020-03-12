@@ -1,0 +1,228 @@
+/*
+* Title: Site
+* Author: Aldasoro
+* Template: Mesural
+* Version: 1.0
+* Copyright 2019 Mesural Inc.
+* www: https://www.mesural.com
+
+
+Taula de continguts
+-------------------
+
+1. Capsule
+2. Buy capsule
+
+/* ---------- 1. Capsule ---------- */
+@font-face {
+	font-family: "HelveticaNeue bold";
+	src: url("fonts/HelveticaNeue-Bold");
+}
+.center{
+	text-align: center;
+}
+.second-inline{
+	margin-left:25px;
+}
+.container h2{
+	font-size: 32px;
+	letter-spacing: 1px;
+	text-rendering: optimizeLegibility;
+	font-family: HelveticaNeue bold;
+	font-weight: bolder;
+	margin-bottom:10px;
+}
+.container h3{
+	letter-spacing: 1px;
+	margin-bottom:10px;
+	font-size: 20px;
+}
+#capsule{
+	max-width: 400px;
+}
+.capsule-buttons{
+	display: block;
+	font-size: 15px;
+	letter-spacing: 1px; 
+	font-weight: normal;
+}
+.capsule-buttons .fas{
+	font-size:9px;
+	color:#a00000;
+}
+.capsule-buttons a{
+	color:#a00000;
+	font-size:15px;
+	font-weight: normal;
+}
+.capsule-buttons a:hover{
+	color:#a00000;
+	text-decoration: underline;
+}
+.container p{
+	font-size: 16px;	
+}
+.reduce-top-50{
+	margin-top:-50px;
+}
+#devices{
+	width:80%;
+	margin-top:50px;
+}
+#devices-text{
+	margin-top:150px;
+	text-align:right;
+}
+p a{
+	color:#a0a0a0;
+	font-size: 16px;
+	font-weight: 400;
+}
+p a:hover{
+	color:#a00000;
+}
+.suport img{
+	height: 50px;
+}
+.logo-footer {
+    max-width: 80%;
+    display: initial;
+}
+
+/* ---------- 2. Buy capsule ---------- */
+#capsule{
+	width:80%;
+}
+.buy-title{
+	font-size: 20px;
+	color:#000;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+.buy-specs{
+	font-size: 12px;
+	line-height: 14px;
+	color:#666;
+}
+.deliver{
+	width: 280px;
+	padding-top: 20px;
+}
+.items{
+	font-size: 20px;
+	color:#000;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-weight: 500;
+	text-align: right;
+}
+.items i{
+	font-size: 16px;
+	margin-left: 10px;
+	color:#ccc;
+}
+.price{
+	font-size: 20px;
+	color:#000;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-weight: 500;
+	text-align: right;
+}
+.capsule-connectivity{
+	border-bottom:1px solid #999;
+	padding-bottom:20px;
+}
+.concepte .subtotal{
+	margin-top: 30px;
+	font-size: 16px;
+	color:#333;
+}
+.value{
+	text-align: right;
+}
+.value .subtotal{
+	margin-top: 30px;
+	font-size: 16px;
+	color:#333;
+}
+.concepte .entrega{
+	margin-top: 10px;
+	font-size: 16px;
+	color:#333;
+}
+.value .entrega{
+	margin-top: 10px;
+	font-size: 16px;
+	color:#333;
+}
+.codi-promo{
+	color:#999;
+	margin-top: 8px;
+	font-size: 12px;
+}
+.totals{
+	padding-bottom: 20px;
+	border-bottom:1px solid #999;
+}
+.concepte .total{
+	margin-top: 30px;
+	font-size: 20px;
+	color:#333;
+	font-weight: 700;
+}
+.value .total{
+	margin-top: 30px;
+	font-size: 20px;
+	color:#333;
+	font-weight: 500;
+}
+.iva{
+	color:#999;
+	margin-top: 8px;
+	font-size: 12px;
+}
+.pay{
+
+	background:rgba(160,0,0,1) !important;
+	margin-right: 0px;
+	line-height: 14px !important;
+	color:#fff !important;
+	height: 40px !important;
+	margin-top: 30px;
+	width: 200px !important;
+	font-size: 14px !important;
+	text-transform: uppercase !important;
+	-moz-transition: all 0.2s ease-in !important;
+	-webkit-transition: all 0.2s ease-in !important;
+	-o-transition: all 0.2s ease-in !important;
+	transition: all 0.2s ease-in !important;
+	font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-weight: 400 !important;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation !important;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none;
+	background-image: none !important;
+	border: 1px solid transparent !important;
+	    border-top-color: transparent !important;
+	    border-right-color: transparent !important;
+	    border-bottom-color: transparent !important;
+	    border-left-color: transparent !important;
+	border-top-color:transparent !important;
+	border-right-color:transparent !important;
+	border-bottom-color:transparent !important;
+	border-left-color:transparent !important;
+	border-radius: 4px !important;
+	letter-spacing:0 !important;
+}

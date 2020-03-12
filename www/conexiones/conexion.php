@@ -1,5 +1,5 @@
 <?php
-require  'medoo.php';
+require  '../lib/medoo/medoo.php';
  
 $database = new medoo([
 // required

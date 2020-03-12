@@ -60,7 +60,7 @@ try {
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('agusti@mesural.com','Agustí de Mesural');
+    $mail->setFrom('agusti@mesural.com','Agusti de Mesural');
     $mail->addAddress($to);                                     // Add a recipient
 
     // Content

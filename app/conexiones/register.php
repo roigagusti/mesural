@@ -32,6 +32,7 @@ if(isset($_POST["email"])&&isset($_POST["password"])&&isset($_POST["re-password"
 				"create_date" => date('Y-m-d H:i:s'),
 				"nom" => $nom[0],
 				"emailconfirmed" => 0,
+				"language" => "english",
 				"token" => token(64),
 				"profile" => $profile
 				]);

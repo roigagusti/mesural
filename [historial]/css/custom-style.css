@@ -1,0 +1,356 @@
+/*
+* Title: App
+* Author: Aldasoro
+* Template: Mesural
+* Version: 1.0
+* Copyright 2019 Mesural Inc.
+* www: http://www.mesural.com
+
+
+Taula de continguts
+-------------------
+ 1.Fonts
+ 2.Codi general
+ 3.Login i registre
+ 4.Dashboard
+*/
+
+
+/* ---------- 1. Fonts ---------- */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('fonts/Helvetica.otf'); /* IE9 Compat Modes */
+  src: url('fonts/Helvetica.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeue.otf'); /* IE9 Compat Modes */
+  src: url('fonts/HelveticaNeue.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:300;
+ font-display:swap;
+ src:local('Rubik Light'),
+ local('Rubik-Light'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Fqj2md8WU.ttf) format('truetype')
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:400;
+ font-display:swap;
+ src:local('Rubik'),
+ local('Rubik-Regular'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXk.ttf) format('truetype')
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:500;
+ font-display:swap;
+ src:local('Rubik Medium'),
+ local('Rubik-Medium'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjmmd8WU.ttf) format('truetype')
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:700;
+ font-display:swap;
+ src:local('Rubik Bold'),
+ local('Rubik-Bold'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iGmd8WU.ttf) format('truetype')
+}
+/* ---------- 2.Codi general ---------- */
+html{
+    height:100%;
+}
+body{
+    background:#ffffff;
+    height:100%;
+ 	margin:0;
+    font-family: 'Rubik','Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
+}
+a{
+    text-decoration: none;
+}
+.hidden{
+    display: none !important;
+}
+.limiter{
+    width: 100%;
+    margin: 0 auto;
+}
+.content{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: relative;
+    z-index: 1;
+}
+input, textarea{
+    border:none;
+    border-bottom: solid 1px #dcdcdc;
+    color: #999;
+    font-size: .9em;
+    width:250px;
+    padding-bottom:5px;
+}
+select{
+    border: solid 1px #dcdcdc;
+    margin-right: 10px;
+    margin-bottom:15px;
+    padding-left: 1rem;
+    color: #999;
+    height: 3rem;
+    font-size: .9em;
+    border-radius: 6px;
+    width:269px;
+}
+select, input[type="text"],input[type="email"],input[type="password"]{
+    -webkit-appearance: none;
+}
+input[type="checkbox"]{
+    height:15px;
+    width:15px;
+    display: inline-block;
+}
+/* ------- 3. Dashboard ------*/
+.page{
+    /*display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;*/
+    flex-wrap: wrap;
+    padding: 0px;
+    position: relative;
+    z-index: 1;
+}
+.lateral{
+    float:left;
+    width:15vw;
+    height:100%;
+    background-color: #f8fafb;
+    /* Hauria de ser fixed per evitar que en les tàctils es mogui amb el dit */
+    position: fixed;
+    z-index: 5;
+    padding-right:0px;
+    padding-left:0px;
+}
+.lateral-logo{
+    width:100%;
+    text-align: center;
+    padding-top:40px;
+}
+.lateral-logo img{
+    width:100px;
+}
+.profile{
+    text-align:center;
+    padding-top:60px;
+}
+.profile img{
+    width:40px;
+    border-radius: 50%;
+    box-shadow:0px 0px 3px rgba(0, 0, 0, .5);;
+}
+.profile-name{
+    margin-top: 10px;
+    color:#999;
+    font-size: 0.8em;
+}
+.dropdown-arrow{
+    font-size: 0.5em;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.navegador{
+    margin-top:100px;
+    text-align: left;
+    list-style: none;
+    width:100%;
+    padding-left:0px;
+    font-size: 0.8em;
+}
+.navegador a{
+    text-decoration: none;
+    color:#999;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador li{
+    margin-top:15px;
+    padding-top:5px;
+    margin-bottom:15px;
+    padding-bottom:5px;
+    padding-left:50px;
+}
+.navegador .active{
+    border-left:3px solid #a00000;
+    padding-left:47px;
+}
+.navegador .active a{
+    color:#666;
+    font-weight: 500;
+}
+.navegador a:hover{
+    color:#ccc;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador-footer{
+    position: absolute;
+    bottom:0px;
+    height:40px;
+    text-align: center;
+    font-size: 0.8em;
+    width:100%;
+    color:#999;
+}
+.navegador-footer a{
+    color:#aaa;    
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador-footer a:hover{
+    color:#ccc;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.board{
+    position: relative;
+    margin-left:15vw;
+    margin-right:0px;
+}
+.contingut, .data{
+    padding-left:30px;
+    padding-top:30px;
+}
+.add{
+    padding-left:40px;
+    font-size:0.8em;
+}
+.add input{
+    width:200px;
+}
+.add button{
+    border: 0px transparent;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    color: #a00000;
+    border:0px transparent;
+    border-radius:12px;
+    width:24px;
+    cursor: pointer;
+}
+.capsulas{
+    padding-top:70px;
+}
+.box{
+    padding-left:40px;
+    margin-bottom: 25px;
+}
+.box img{
+    height: 30px;
+}
+.box .title{
+    display: inline-block;
+    width: 300px;
+    margin-left:10px;
+}
+.box .name{
+    font-size: 12px;
+    margin-bottom:2px;
+}
+.box .updated{
+    font-size: 10px;
+    color:#ccc;
+}
+.box .value{
+    display: inline-block;
+    font-size: 12px;
+}
+.box .arrow{
+    display: inline-block;
+    color:#ccc;
+    font-size: 12px;
+    margin-left:15px;
+}
+.arrow a{
+    color:#ccc;
+    text-decoration: none;
+}
+.box .collapse{
+    font-size:12px;
+    margin-top:10px;
+    margin-left:45px;
+}
+.capsule-info{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+.table-data{
+    width:80% !important;
+}
+.table thead th{
+    border-bottom: 1px solid #dee2e6 !important;
+}
+.table th{
+    border-top: none !important;
+}
+.table tbody{
+    text-align: center;
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 350px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+.table-wrapper-scroll-y::-webkit-scrollbar{
+  width: 11px;
+}
+.table-wrapper-scroll-y{
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.table-wrapper-scroll-y::-webkit-scrollbar-track{
+  background: var(--scrollbarBG);
+}
+.table-wrapper-scroll-y::-webkit-scrollbar-thumb{
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}

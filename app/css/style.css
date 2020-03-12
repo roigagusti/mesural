@@ -1,52 +1,99 @@
 /*
-* Title: App
+* Title: App. Style
 * Author: Aldasoro
 * Template: Mesural
-* Version: 1.0
-* Copyright 2019 Mesural Inc.
-* www: http://www.mesural.com
+* Version: 0.1.1
+* Copyright 2020 Mesural Inc.
+* Url: https://www.mesural.com
 
 
-Taula de continguts
--------------------
- 1.Fonts
- 2.Codi general
- 3.Login i registre
- 4.Dashboard
-*/
+Content table
+--------------
+1. Fonts
+2. Codi general
+3. Login i registre
+4. Navegador i navegador mòbil
+5. Dashboard
 
-
-/* ---------- 1. Fonts ---------- */
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500);
+/* ----- 1. Fonts ----- */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:300;
+ font-display:swap;
+ src:local('Rubik Light'),
+ local('Rubik-Light'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Fqj2md8WU.ttf) format('truetype')
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:400;
+ font-display:swap;
+ src:local('Rubik'),
+ local('Rubik-Regular'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXk.ttf) format('truetype')
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:500;
+ font-display:swap;
+ src:local('Rubik Medium'),
+ local('Rubik-Medium'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjmmd8WU.ttf) format('truetype')
+}
+@font-face {
+ font-family:Rubik;
+ font-style:normal;
+ font-weight:700;
+ font-display:swap;
+ src:local('Rubik Bold'),
+ local('Rubik-Bold'),
+ url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iGmd8WU.ttf) format('truetype')
+}
 
-@font-face {
-  font-family: 'Helvetica';
-  src: url('fonts/Helvetica.otf'); /* IE9 Compat Modes */
-  src: url('fonts/Helvetica.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-}
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('fonts/HelveticaNeue.otf'); /* IE9 Compat Modes */
-  src: url('fonts/HelveticaNeue.otf?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-}
-/* ---------- 2.Codi general ---------- */
+/* ----- 2.Codi general ----- */
 html{
     height:100%;
 }
 body{
-    background:#f2f2f2;
+    background:#fff;
     height:100%;
  	margin:0;
-    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
+    font-family: 'Rubik','Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Arial','Verdana',serif;
 }
 a{
     text-decoration: none;
 }
+select, input[type="text"],input[type="email"],input[type="password"]{
+    -webkit-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.access{
+    background:#f2f2f2;
+}
 .hidden{
     display: none !important;
 }
-/* ------- 3. Login i registre ------*/
+.fail,.success{
+    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
+    font-size: .9em;
+    font-weight: 300;
+    text-align:center;
+}
+.fail{
+    color: rgb(165,0,0);    
+}
+.success{
+    color: rgb(0,165,0);    
+}
+
+/* -----  3. Login i registre ----- */
 .limiter{
     width: 100%;
     margin: 0 auto;
@@ -94,36 +141,6 @@ a{
 .box .logo img{
     width:200px;
 }
-input, textarea{
-    border: solid 1px #dcdcdc;
-    margin-right: 10px;
-    margin-bottom:15px;
-    padding-left: 1rem;
-    color: #999;
-    height: 3rem;
-    font-size: .9em;
-    border-radius: 6px;
-    width:250px;
-}
-select{
-    border: solid 1px #dcdcdc;
-    margin-right: 10px;
-    margin-bottom:15px;
-    padding-left: 1rem;
-    color: #999;
-    height: 3rem;
-    font-size: .9em;
-    border-radius: 6px;
-    width:269px;
-}
-select, input[type="text"],input[type="email"],input[type="password"]{
-    -webkit-appearance: none;
-}
-input[type="checkbox"]{
-    height:15px;
-    width:15px;
-    display: inline-block;
-}
 .terms{
     position:relative;
     width:270px;
@@ -133,7 +150,7 @@ input[type="checkbox"]{
     color: #999;
 }
 .terms a{
-    color: #dcdcdc;
+    color: #999;
     -moz-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
@@ -149,7 +166,34 @@ input[type="checkbox"]{
 .submit-zone{
     margin-top:20px;
 }
-button{
+.box input, .box textarea{
+    border: solid 1px #dcdcdc;
+    margin-right: 10px;
+    margin-bottom:15px;
+    padding-left: 1rem;
+    color: #999;
+    height: 3rem;
+    font-size: .9em;
+    border-radius: 6px;
+    width:250px;
+}
+.box select{
+    border: solid 1px #dcdcdc;
+    margin-right: 10px;
+    margin-bottom:15px;
+    padding-left: 1rem;
+    color: #999;
+    height: 3rem;
+    font-size: .9em;
+    border-radius: 6px;
+    width:269px;
+}
+.box input[type="checkbox"]{
+    height:15px;
+    width:15px;
+    display: inline-block;
+}
+.box button{
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -262,25 +306,175 @@ button{
     z-index: 1;
     margin-top:20px;
 }
-.fail,.success{
-    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
-    font-size: .9em;
-    font-weight: 300;
+
+/* ----- 4. Navegador i navegador mòbil ----- */
+.lateral-logo{
+    width:100%;
+    text-align: center;
+    padding-top:40px;
+}
+.lateral-logo img{
+    width:100px;
+}
+.profile{
     text-align:center;
+    padding-top:60px;
 }
-.fail{
-    color: rgb(165,0,0);    
+.profile img{
+    width:40px;
+    border-radius: 50%;
+    box-shadow:0px 0px 3px rgba(0, 0, 0, .5);;
 }
-.success{
-    color: rgb(0,165,0);    
+.profile .initials{
+    padding:10px;
+    border-radius: 50%;
+    background-color: rgba(160,0,0,0.2);
+    color:#fff;
+    box-shadow:0px 0px 3px rgba(0, 0, 0, .2);;
 }
-/* ------- 4. Dashboard ------*/
+.profile-name{
+    margin-top: 20px;
+    color:#999;
+    font-size: 0.8em;
+}
+.dropdown-arrow{
+    font-size: 0.5em;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.navegador{
+    margin-top:100px;
+    text-align: left;
+    list-style: none;
+    width:100%;
+    padding-left:0px;
+    font-size: 0.8em;
+}
+.navegador a{
+    text-decoration: none;
+    color:#999;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador li{
+    margin-top:15px;
+    padding-top:5px;
+    margin-bottom:15px;
+    padding-bottom:5px;
+    padding-left:50px;
+}
+.navegador .active{
+    border-left:3px solid #a00000;
+    padding-left:47px;
+}
+.navegador .active a{
+    color:#666;
+    font-weight: 500;
+}
+.navegador a:hover{
+    color:#ccc;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador-footer{
+    position: absolute;
+    bottom:0px;
+    height:40px;
+    text-align: center;
+    font-size: 0.8em;
+    width:100%;
+    color:#999;
+}
+.navegador-footer a{
+    color:#aaa;    
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador-footer a:hover{
+    color:#ccc;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+/* El lateral es converteix en header en versió mòbil */
+.lateral-header-mobile{
+    display:none;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top:0;
+    z-index: 5;
+    background: rgb(160,0,0);
+}
+.mobile-logo{
+    text-align: center;
+}
+.mobile-logo img{
+    height: 30px;
+    margin-top:15px;
+}
+.mobile-bars{
+    position:absolute;
+    top:22px;
+    right:30px;
+    color:#fff;
+}
+
+/* El lateral es converteix en footer en versió mòbil */
+.lateral-footer-mobile{
+    display:none;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    bottom:0;
+    background-color: #f8fafb;
+    border-top: 1px solid #dcdcdc;
+}
+.navegador-mobile{
+    list-style: none;
+    padding-top:7px;
+    padding-left: 0;
+}
+.navegador-mobile li{
+    display: inline;
+    text-align: center;
+    font-size: 0.85em;
+}
+.navegador-mobile a{
+    text-decoration: none;
+    color:#999;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;  
+}
+.navegador-mobile a:hover{
+    color:#ccc;
+    -moz-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in; 
+}
+.navegador-mobile .active{
+    font-weight: 500;
+    padding-bottom:16px;
+    border-bottom:3px solid #a00000;
+}
+.navegador-mobile .active a{
+    color:#666 !important;
+    font-weight: 500;
+}
+
+/* ----- 5. Dashboard ----- */
 .page{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
     flex-wrap: wrap;
     padding: 0px;
     position: relative;
@@ -288,168 +482,115 @@ button{
 }
 .lateral{
     float:left;
-    width:5%;
-    height:100vh;
-    background-color: #a00000;
-    position: relative;
+    height:100%;
+    background-color: #f8fafb;
+    position: fixed !important;
     z-index: 5;
     padding-right:0px;
     padding-left:0px;
 }
-.navegador{
-    margin-top:65px;
-    text-align: center;
-    list-style: none;
-    width:100%;
-    padding-left:0px;
-}
-.navegador li{
-    height:60px;
-    padding-top:20px;
-}
-.navegador li .fa{
-    font-size:25px;
-}
-.navegador a{
-    color:rgba(255,255,255,0.5);
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-.navegador a:hover{
-    color:rgba(255,255,255,0.9);
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-.nav-title{
-    display:block;
-    font-size:0.8em;
-    margin-top:5px;
-}
+/* Espai blanc per mostrar dades */
 .board{
-    float:left;
-    width:95%;
     position: relative;
-    z-index: 5;  
+    float:none !important;
 }
-.header{
-    height:65px;
-    background-color: #fff;
-}
-.nav-logo{
-    width:125px;
-    display:inline-block;
-    position:relative;
-    margin-top:15px;
-    margin-left:30px;
-}
-.nav-logo img{
-    height:30px;    
-}
+/* Espai ja amb marges en vora */
 .contingut{
-    margin-left: 30px;
-    margin-top: 30px;
+    padding-left:50px;
+    padding-top:30px;
 }
-.new input{
-    height: 40px;
+/* Zona d'afegir noves càpsules */
+.add{
+    font-size:0.8em;
 }
-.new .fail, .new .success{
+.add input{
+    width:200px;
+    border:none;
+    border-bottom: solid 1px #dcdcdc;
+    color: #999;
+    font-size: .9em;
+    width:250px;
+    padding-bottom:5px;
+}
+.add button{
+    text-align: center;
+    margin-left: 15px;
+    background-color: white;
+    color: #a00000;
+    border:0px transparent;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.rodo-mes{
+    font-weight: 500;
+    border-radius: 50%;   
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1); 
+    width: 30px;
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+/* Zona de càpsules */
+.capsulas{
+    padding-top:50px;
+}
+/* Cada una de les càpsules */
+.capsula{
+    margin-bottom: 25px;
+}
+.capsula img{
+    height: 30px;
+}
+.capsula .title{
+    display: inline-block;
+    width: 300px;
+    margin-left:10px;
+}
+.capsula .name{
+    font-size: 12px;
+    margin-bottom:2px;
+}
+.capsula .updated{
+    font-size: 10px;
+    color:#ccc;
+}
+.capsula .value{
+    display: inline-block;
+    font-size: 12px;
+}
+.capsula .arrow{
+    display: inline-block;
+    color:#ccc;
+    font-size: 12px;
     margin-left:15px;
 }
-.sensor-tables{
-    margin-top:50px;
-    display: inline-flex;
-    margin-bottom:100px;
+.arrow a{
+    color:#ccc;
+    text-decoration: none;
 }
-.sensor-box{
-    background-color: #fff;
-    border: 1px solid #dcdcdc;
-    width:340px;
-    padding-left:30px;
-    padding-right:30px;
-    padding-bottom:50px;
-    margin-right:20px;
+.capsula .collapse{
+    font-size:12px;
+    margin-top:10px;
+    margin-left:45px;
 }
-.sensor-box th{
-    font-size:0.9em;
+.capsule-info{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+/* Dades de cada càpsula */
+.table-data{
+    width:80% !important;
+}
+.table thead th{
+    border-bottom: 1px solid #dee2e6 !important;
+}
+.table th{
     border-top: none !important;
-    border-bottom: none !important;
 }
-.sensor-box td{
+.table tbody{
     text-align: center;
-    font-size:0.8em;
-}
-.sensor-box-title{
-    padding-top: 40px;
-    padding-bottom: 20px;
-    font-weight: 500;
-}
-.sensor-edit{
-    padding-top: 40px;
-    padding-bottom: 24px;
-    font-size: 0.8em;
-    margin-top:0.1em;
-    text-align: right;
-    color:#999;
-}
-.sensor-edit a{
-    text-decoration:none;
-    color: #999;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
-}
-.sensor-edit a:hover{
-    color: #a00000;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
-}
-.edit-name input{
-    height:1em;
-    border: none;
-    padding-left: 0px;
-    margin-bottom: 0px;
-}
-.sensor-edit button{
-    padding:0;
-    border:none;
-    background-color: #fff;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
-} 
-.sensor-edit button:hover{
-    color: #a00000;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
-}
-.sensor-box-date{
-    margin-top:30px;
-    text-align: center;
-}
-.sensor-box-date a{
-    color: #999;
-    font-size:0.8em;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
-}
-.sensor-box-date a:hover{
-    color: #333;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
 }
 .my-custom-scrollbar {
     position: relative;
@@ -474,23 +615,98 @@ button{
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
-.delete-sensor{
-    width:100%;
+.collapse {
+    display: none
+}
+
+.collapse.show {
+    display: block
+}
+
+tr.collapse.show {
+    display: table-row
+}
+
+tbody.collapse.show {
+    display: table-row-group
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease
+}
+
+/* ----- 5. Data import ----- */
+.import{
     text-align: center;
-    margin-top:30px;
+    padding-top:45vh;
+    font-size:14px;
+    color:#aaa;
 }
-.delete-sensor a{
-    color:#a00000;
-    font-size: 0.8em;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
+
+/* ----- 6. Settings ----- */
+.settings{
+    padding-left:50px !important;
+    padding-top:45px !important;
 }
-.delete-sensor a:hover{
+.settings h2{
+    font-size:16px;
+    margin:0;
+    font-weight: 500;
+}
+.settings ul{
+    margin-top:50px;
+    padding-left:10px;
+    padding-right:10px;
+    list-style: none;
+}
+.account-settings li{
+    height:40px;
+    font-size: 12px;
+}
+.set-title, .set-value, .set-button{
+    display: inline-block;
+    height:18px;
+    margin-top:3px;
+}
+.set-title{
+    width:170px;
+    font-weight: 500;
+    color: #666;
+}
+.set-value{
+    width:300px;
+    font-weight: 300;
     color: #999;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;
+}
+.set-button{
+    width:75px;
+    font-weight: 400;
+    text-align: right;
+}
+.set-button a{
+    color: #a00000;    
+}
+.set-button a:hover{
+    color: #a00000;
+    text-decoration: underline;
+}
+.account-settings input{
+    border: none;
+    position: initial; 
+    width: 298px; 
+    color:#a00000;
+}
+.account-settings button{
+    border:none;
+    padding:0;
+    margin:0;
+    background-color: #fff;
+    color:#a00000;
+}
+.account-settings button:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

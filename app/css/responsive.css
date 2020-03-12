@@ -1,56 +1,78 @@
 /*
-* Title: Responsive
+* Title: App. Responsive
 * Author: Aldasoro
-* Template: Masala Personal
-* Version: 1.0
-* Copyright 2018 Masala Consultancy Engineering
-* www: http://www.masalaconsultors.com
-* mail: info masalaconsultors.com
+* Template: Mesural
+* Version: 0.1.1
+* Copyright 2020 Mesural Inc.
+* Url: https://www.mesural.com
 
 
-Taula de continguts
--------------------
+Content table
+--------------
+1. Devices < width: 1199px
+2. Devices < width: 1060px
+3. Devices < width: 991px
+4. Devices < width: 767px
+5. Devices < width: 460px
+6. Responsive menu
 
- 1.Medium devices
- 2.Small devices
- 3Semi small devices
- 4.Exra small devices
-
-
-/* ---------- 1. Medium devices --------- */
+/* ----- Devices < width: 1350px ----- */
 @media (max-width: 1350px) {
-	.lateral{
-		width:7%;
+	.navegador li{
+    	padding-left:30px;
 	}
+	.navegador .active{
+	    padding-left:27px;
+	}
+	/*.lateral{
+	    width:20vw;
+	}*/
 	.board{
-		width:93%;
+	    width:80vw;
 	}
 }
 
-/* ---------- 2. Small devices ---------- */
-@media (max-width: 991px) {
-	.lateral{
-		width:10%;
+/* ----- Devices < width: 1260px ----- */
+@media (max-width: 1260px) {
+	.title{
+		width:180px !important;
 	}
-	.board{
-		width:90%;
+	.contingut{
+		padding-left:30px !important;
 	}
 }
 
-/* ---------- 3. Semi small devices ---------- */
-@media (max-width: 650px) {
+/* ----- Devices < width: 920px ----- */
+@media (max-width: 920px) {
 	.lateral{
 		display:none;
 	}
 	.board{
-		width:100%;
+		margin-left: 0 !important;
+		width:100% !important;
+		padding-top:60px;
+		z-index:1;
+		position:relative;
 	}
-	.new{
-		text-align: center;
+	.lateral-header-mobile{
+		display: initial;
+	}
+	.lateral-footer-mobile{
+		display: initial;
+	}
+	.contingut{
+		padding-right:30px !important;
 	}
 }
 
-/* ---------- 4. Extra small devices ---- */
+/* ----- Devices < width: 650px ----- */
+@media (max-width: 650px) {
+	.board{
+		width:100%;
+	}
+}
+
+/* ----- Devices < width: 468px ----- */
 @media (max-width: 468px) {
     .logo{
         margin-bottom:25px;
@@ -60,5 +82,14 @@ Taula de continguts
     }  
 	.new input{
 		text-align: center;
+	}
+	.account-settings li{
+		margin-bottom:20px;
+	}
+	.add input{
+		width:200px;
+	}
+	.title{
+		width:150px !important;
 	}
 }

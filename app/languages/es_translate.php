@@ -1,11 +1,11 @@
 <?php
 /*
-# Author: Aldasoro
-# Template: APP Mesural
-# Version: 1.0
-# Copyright 2019 Aldasoro Inc
-# www: https://app.mesural.com
-# Language: Español
+* Title: App. Languages
+* Author: Aldasoro
+* Template: Mesural
+* Version: 0.1.1
+* Copyright 2020 Mesural Inc.
+* Language: Español
 
 
 Taula de continguts
@@ -14,6 +14,7 @@ Taula de continguts
  1. Metadatos
  2. Log in
  3. Sign up
+ 4. Dashboard
 */
 
 $text = array(
@@ -25,9 +26,10 @@ $text = array(
     "User" => "Usuario",
     "Email" => "Email",
     "Password" => "Contraseña",
-    "Log in" => "Accede",
+    "Log in" => "Acceder",
     "Forgot" => "¿Olvidaste tu contraseña?",
     "Not account" => "¿Aún no tienes una cuenta?",
+    "Better login" => "¿Prefieres entrar?",
     "Sign up" => "Regístrate",
     "Login error" => "Usuario o contraseña incorrectos",
     "Email error" => "Por favor, escribe un email válido",
@@ -54,18 +56,8 @@ $text = array(
     "Not profile" => "Por favor, escoje un perfil",
     "Email-fail" => "No ha sido posible enviar el email de registro",
     "Email-not-confirmed" => "El email no ha sido confirmado todavía",
-	"Register success" => "Se ha completado el registro con éxito.<br>Se le ha enviado un email con instrucciones para activar la cuenta.",
+	"Register success" => "Se ha completado el registro con éxito.<br>Se le ha enviado un email con instrucciones para activar la cuenta."
 
 // 4. Dashboard
-    "Add new sensor" => "Añadir nuevo sensor",
-    "Add" => "Añadir",
-    "Edit" => "Editar",
-    "Date" => "Fecha",
-    "Time" => "Hora",
-    "Value" => "Valor",
-    "Accept" => "Acceptar",
-    "No-gauge" => "No hay ningún sensor con este número.",
-    "Gauge-success" => "El sensor se ha añadido con éxito",
-    "Already-connected" => "El sensor ya ha sido conectado a esta cuenta"
 );
 ?>

@@ -1,134 +1,60 @@
-<html>
-<head>
+<?php
+$val = "{x:0, y:200},{x: 1, y: 202}, {x: 2, y: 210}, {x: 3, y: 205}, {x: 4, y: 215}, {x: 5, y: 202}, {x: 6, y: 212}, {x: 7, y: 207}, {x: 8, y: 217}, {x: 9, y: 212}, {x: 10, y: 205}, {x: 11, y: 215}, {x: 12, y: 202}, {x: 13, y: 212}, {x: 14, y: 207}, {x: 15, y: 217}";
+?>
+<script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+<script src="utils.js"></script>
 <style>
-body{
-	background-color:#f2f2f2;
-	height: 100%;
-	width:100%;
-}
-.container {
-	width: 150px;
-	height: 150px;
-	margin: 50px auto;
-	position: relative;
-	perspective: 500px;
-}
-#cube {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	transform-style: preserve-3d;
-	transition: transform 1s;
-}
-#cube figure {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	border: 1px solid #bcbcbc;
-}
-#cube .back {
-	background: rgba(255,255,255,0.5);
-	transform: rotateX(0deg) translateZ(-75px);
-}
-#cube .left {
-	background: rgba(255,255,255,0.5);
-	transform: rotateY(90deg) translateZ(-75px);
-}
-#cube .bottom {
-	background: rgba(255,255,255,0.5);
-	transform: rotateX(90deg) translateZ(-75px);
-}
-#cube .front {
-	background: rgba(255,255,255,0.5);
-	transform: rotateX(0deg) translateZ(75px);
-}
-#cube .right {
-	background: rgba(255,255,255,0.5);
-	transform: rotateY(90deg) translateZ(75px);
-}
-#cube .top {
-	background: rgba(255,255,255,0.5);
-	transform: rotateX(90deg) translateZ(75px);
-}
-.botones {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  position: relative;
- }
-.boton {
-  /*estructura*/
-  width: 30px;
-  height: 30px;
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  position: absolute;
-  /*texto*/ 
-  color: #999;
-  font-weight: bold;
-  text-align: center;
-  line-height: 30px;
-  cursor: pointer;
-  user-select: none;
-}
-#abajo {
-  top: 35px;
-}
-#izquierda {
-  top: 35px;
-  left: -35px;
-}
-#derecha {
-  top: 35px;
-  left: 35px;
-}
+canvas{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 </style>
-</head>
 
-<body>
-
-
-<section class="container">
-  <div id="cube">
-    <figure class="back"></figure>
-    <figure class="left"></figure>
-    <figure class="bottom"></figure>
-    <figure class="front"></figure>
-    <figure class="right"></figure>
-    <figure class="top"></figure>
-  </div>
-</section>
-<section class="botones">
-  <div class="boton" id="arriba">▲</div>
-  <div class="boton" id="abajo">▼</div>
-  <div class="boton" id="izquierda">◄</div>
-  <div class="boton" id="derecha">►</div>
-</section>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<div class="chart-container" style="position: relative; height:100px; width:100%">
+  <canvas id="myChart" width="20" height="20">
+    <p>Your browser does not support our graphs. Please try another browser.</p>
+  </canvas>
+</div>
 <script>
-var angX = 0;
-var angY = 0;
-
-$('.boton').on('click', function() {
-  switch ($(this).attr("id")) {
-    case "arriba":
-      angX = angX + 90;
-      break;
-    case "abajo":
-      angX = angX - 90;
-      break;
-    case "derecha":
-      angY = angY + 90;
-      break;
-    case "izquierda":
-      angY = angY - 90;
-      break;
-  }
-  $('#cube').attr('style', 'transform: rotateX(' + angX + 'deg) rotateY(' + angY + 'deg);')
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['08.00', '09.00', '10.00', '11.00', '12.00', '13.00', '14.00', '15.00', '16.00', '17.00', '18.00','19.00', '20.00', '21.00', '22.00', '23.00'],
+        datasets: [{
+            label: '',
+            data: [<?php echo $val ?>],
+            backgroundColor: 'rgba(160, 0, 0, 0.2)',
+            borderColor: 'rgba(160, 0, 0, 1)',
+            borderWidth: 1,
+            pointBackgroundColor: 'rgba(160, 0, 0, 0)',
+            pointBorderColor: 'rgba(160, 0, 0, 0)',
+            pointHoverBackgroundColor: 'rgba(160, 0, 0, 1)',
+            fill: true
+        }]
+    },
+    options: {
+        tooltips: {
+            mode: 'y'
+        },
+        legend: {
+            display: false
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                    display: false
+                },
+                gridLine: {
+                  display: false
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                    display: false
+                }
+            }]
+        }
+    }
 });
 </script>
-</body>
-</html>

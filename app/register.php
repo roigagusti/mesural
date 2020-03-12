@@ -3,59 +3,27 @@
 if(isset($_GET['profile'])){
   $profile = $_GET['profile'];
 }
-  require('conexiones/conexion.php');
-  $ipaddress = $_SERVER['REMOTE_ADDR'];
-  $user = $_SERVER['REMOTE_USER'];
-
-  require_once("conexiones/geoip2.phar");
-  use GeoIp2\Database\Reader;
-  $reader = new Reader('conexiones/GeoLite2-City.mmdb');
-  $record = $reader->city($_SERVER['REMOTE_ADDR']);
-
-  function isMobileDevice() {
-      return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-  }
-  if(isMobileDevice()){
-      $mobile = 1;
-  }
-  else {
-      $mobile = 0;
-  }
-
-  $taulausuaris = $database->insert("visitors", [
-  "ip" => $ipaddress,
-  "user" => $user,
-  "city" => $record->city->name,
-  "postal" => $record->postal->code,
-  "mobile" => $mobile,
-  "type" => $profile,
-  "visit_date" => date('Y-m-d H:i:s')
-]);
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $text['lang']; ?>">
   <head>
     <!-- Meta data -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="title" content="Mesural">
-  <meta name="description" content="Mesural permite conrolar el comportamiento estructural de los edificios en tiempo y de forma remota.">
-  <meta property="image" content="img/mini-marca.jpg">
-  <meta name="author" content="Aldasoro">
+  <?php include_once("sections/metadata.php"); ?>
 
-    <!-- Títol i Favicons -->
-    <title>Register | Mesural</title>
-    <link rel="shortcut icon" href="img/favicon.ico">
+  <!-- Títol i Favicons -->
+  <title>Mesural | Register</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
 
-    <!-- CSS basics -->
-	<!-- CSS custom -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
-	<!-- Google Fonts -->
+  <!-- CSS Libraries -->
+  <!-- CSS Custom -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
+
+  <!-- Scripts Libraries -->
+  <!-- Scripts custom -->
 </head>
 
-<body>
+<body class="access">
 <?php include_once("sections/analytics.php") ?>
 <!-- Contingut de pàgina -->
 <div class="limiter">
@@ -76,7 +44,7 @@ if(isset($_GET['profile'])){
         <input type="password" id="password" name="password" placeholder="<?php echo $text['Password']; ?>" required>
         <input type="password" id="re-password" name="re-password" placeholder="<?php echo $text['Repeat password']; ?>" required>
         <div class="terms">
-          <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required><?php echo $text['Agree with']; ?> <a href="#" class="term-service"><?php echo $text['Terms of service']; ?></a>
+          <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required><?php echo $text['Agree with']; ?> <a href="//www.mesural.com/legal.php" target="_blank" class="term-service"><?php echo $text['Terms of service']; ?></a>
         </div>
         <div class="submit-zone">
           <button class="btn-acces" type="submit"><?php echo $text['Register']; ?></button>
