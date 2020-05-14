@@ -4,7 +4,7 @@
       <a href="//www.mesural.com" hreflang="<?php echo $text['Lang']; ?>"><img class="logo logo-footer" alt="Mesural Logo" title="Mesural Logo"  src="https://www.mesural.com/img/logo-dark.png" /></a>
     </div>
     <ul class="col-md-2">
-      <li class="footer-titol"><a><?php echo $text['Contact']; ?></a></li>
+      <li class="footer-titol"><a><?php echo $text['Address']; ?></a></li>
       <li><?php echo $text['Direccio']; ?></li>
       <li>08018 Barcelona</li>
       <li>

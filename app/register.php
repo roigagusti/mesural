@@ -1,8 +1,15 @@
-<?php include_once("sections/languages.php") ?>
 <?php
-if(isset($_GET['profile'])){
-  $profile = $_GET['profile'];
+//Redirigir a connexió segura HTTPS
+if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
+  header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+  exit;
 }
+#Incloure direcció dels arxius de traducció
+include_once("sections/languages.php");
+
+/*if(isset($_GET['profile'])){
+  $profile = $_GET['profile'];
+}*/ 
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $text['lang']; ?>">
@@ -32,14 +39,14 @@ if(isset($_GET['profile'])){
       <div class="logo"><?php echo $text['Sign up']; ?></div>
 
       <form class="form-signin" action="conexiones/register.php?lang=<?php echo $text['lang']; ?>" method="post">
-        <select id="profile" name="profile" required>
+        <!--<select id="profile" name="profile" required>
           <option value="0"><?php echo $text['Choose your profile']; ?></option>
           <option value="1"><?php echo $text['Architect']; ?></option>
           <option value="2"><?php echo $text['Engineer']; ?></option>
           <option value="3"><?php echo $text['Constructor']; ?></option>
           <option value="4"><?php echo $text['Promotor']; ?></option>
           <option value="5"><?php echo $text['Assurance']; ?></option>
-        </select>
+        </select>-->
         <input type="email" id="email" name="email" placeholder="<?php echo $text['Your email']; ?>" required>
         <input type="password" id="password" name="password" placeholder="<?php echo $text['Password']; ?>" required>
         <input type="password" id="re-password" name="re-password" placeholder="<?php echo $text['Repeat password']; ?>" required>

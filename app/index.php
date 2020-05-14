@@ -1,4 +1,9 @@
 <?php session_start();
+//Redirigir a connexió segura HTTPS
+if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
+  header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+  exit;
+}
 //Incloure direcció dels arxius de traducció
 include_once("sections/languages.php");
 //Incloure arxius de connexió a BBDD
@@ -85,15 +90,20 @@ if(isset($_GET['delete-sensor'])){
   <div class="page">
     <?php include_once("sections/lateral-header.php"); ?>
     <div class="board col-lg-offset-2 col-lg-10 col-xs-offset-3 col-xs-9 ">
+      
       <div class="contingut">
         
         <div class="add">
             <form class="form-new" action="index.php?lang=<?php echo $text['lang']; ?>" method="get">
-              <input type="text" id="newcapsule" name="newcapsule" placeholder="Add new sensor">
-              <button type="submit"><div class="rodo-mes">+</div></button>
-              <span class="success <?php if($_GET['event'] == 'success'){}else{echo 'hidden';}?>"><?php echo $text['Gauge-success']; ?></span>
-              <span class="fail <?php if($_GET['event'] == 'no-capsule'){}else{echo 'hidden';}?>"><?php echo $text['No-gauge']; ?></span>
-              <span class="fail <?php if($_GET['event'] == 'already-connected'){}else{echo 'hidden';}?>"><?php echo $text['Already-connected']; ?></span>
+              <div class="col-xs-10 col-lg-2">
+                <input type="text" id="newcapsule" name="newcapsule" placeholder="Add new sensor">
+              </div>
+              <div class="add-button col-xs-2 col-lg-1">
+                <button type="submit"><div class="rodo-mes">+</div></button>
+              </div>
+                <span class="success <?php if($_GET['event'] == 'success'){}else{echo 'hidden';}?>"><?php echo $text['Gauge-success']; ?></span>
+                <span class="fail <?php if($_GET['event'] == 'no-capsule'){}else{echo 'hidden';}?>"><?php echo $text['No-gauge']; ?></span>
+                <span class="fail <?php if($_GET['event'] == 'already-connected'){}else{echo 'hidden';}?>"><?php echo $text['Already-connected']; ?></span>
             </form>
         </div>
 
@@ -125,15 +135,7 @@ if(isset($_GET['delete-sensor'])){
               <div class="arrow"><a data-toggle="collapse" href="#capsula<?php echo $capsulenumber; ?>" role="button" aria-expanded="false" aria-controls="capsula<?php echo $capsulenumber; ?>"><i class="fa fa-chevron-down"></i></a></div>
             </div>
 
-            <div class="collapse" id="capsula<?php echo $capsulenumber; ?>" style="font-size:12px;margin-top:10px;">
-              <!--<div class="sensor-edit col-md-2">
-                <?php if($_GET['edit-name'] == $sensor['capsuleNumber']){?><button type="submit"><?php echo $text['Accept']; ?></button>
-                <?php }else{ ?><a href="index.php?edit-name=<?php echo $sensor['capsuleNumber']; ?>"><?php echo $text['Edit']; ?></a>
-                <?php } ?>
-              </div>-->
-              <div class="capsule-info">
-                <!--<?php include("prova.php"); ?>-->
-              </div>
+            <div class="collapse" id="capsula<?php echo $capsulenumber; ?>">
               <div class="table-data table-responsive table-wrapper-scroll-y my-custom-scrollbar">
                 <table class="table table-hover table-sm">
                   <thead>
@@ -182,7 +184,7 @@ if(isset($_GET['delete-sensor'])){
 </div>
 <!-- JavaScripts basics -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- JavaScripts custom -->
 <script type="text/javascript" src="js/script.js"></script>

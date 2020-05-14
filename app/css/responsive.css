@@ -67,9 +67,6 @@ Content table
 
 /* ----- Devices < width: 650px ----- */
 @media (max-width: 650px) {
-	.board{
-		width:100%;
-	}
 }
 
 /* ----- Devices < width: 468px ----- */

@@ -33,8 +33,7 @@ if(isset($_POST["email"])&&isset($_POST["password"])&&isset($_POST["re-password"
 				"nom" => $nom[0],
 				"emailconfirmed" => 0,
 				"language" => "english",
-				"token" => token(64),
-				"profile" => $profile
+				"token" => token(64)
 				]);
 
 				header('Location: sendmail.php?type=register&to='.$email.'&lang='.$_GET["lang"]);

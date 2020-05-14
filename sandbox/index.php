@@ -1,4 +1,11 @@
-<?php include_once("sections/languages.php"); ?>
+<?php
+if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
+  header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+  exit;
+}
+include_once("sections/languages.php");
+?>
+
 <!DOCTYPE html>
 <html lang="<?php echo $text['Lang']; ?>">
 	<head>
@@ -105,7 +112,7 @@
 					</div>
 					<div class="col-sm-4">
 						<p id="devices-text"><?php echo $text['Paragraf remot 1']; ?><br><br><?php echo $text['Paragraf remot 2']; ?><br><br>
-						<a class="more-information" href="#" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['More information']; ?></a>
+						<!--<a class="more-information" href="#" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['More information']; ?></a>-->
 						</p>
 					</div>
 				</div>

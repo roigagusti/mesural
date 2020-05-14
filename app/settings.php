@@ -1,4 +1,9 @@
 <?php session_start();
+//Redirigir a connexió segura HTTPS
+if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
+  header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+  exit;
+}
 #Incloure direcció dels arxius de traducció
 include_once("sections/languages.php");
 #Incloure arxius de connexió a BBDD

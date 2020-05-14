@@ -192,6 +192,8 @@ select, input[type="text"],input[type="email"],input[type="password"]{
     height:15px;
     width:15px;
     display: inline-block;
+    top: 3px;
+    position: relative;
 }
 .box button{
     display: inline-block;
@@ -275,7 +277,7 @@ select, input[type="text"],input[type="email"],input[type="password"]{
     display: block;
 }
 .forgot .cta a{
-    color:#a00000;
+    color:#bd574e;
 }
 .forgot a{
     text-decoration:none;
@@ -367,7 +369,7 @@ select, input[type="text"],input[type="email"],input[type="password"]{
     padding-left:50px;
 }
 .navegador .active{
-    border-left:3px solid #a00000;
+    border-left:3px solid #bd574e;
     padding-left:47px;
 }
 .navegador .active a{
@@ -435,6 +437,7 @@ select, input[type="text"],input[type="email"],input[type="password"]{
     width: 100%;
     height: 60px;
     bottom:0;
+    z-index: 5;
     background-color: #f8fafb;
     border-top: 1px solid #dcdcdc;
 }
@@ -466,7 +469,7 @@ select, input[type="text"],input[type="email"],input[type="password"]{
 .navegador-mobile .active{
     font-weight: 500;
     padding-bottom:16px;
-    border-bottom:3px solid #a00000;
+    border-bottom:3px solid #bd574e;
 }
 .navegador-mobile .active a{
     color:#666 !important;
@@ -493,6 +496,7 @@ select, input[type="text"],input[type="email"],input[type="password"]{
 .board{
     position: relative;
     float:none !important;
+    z-index:1;
 }
 /* Espai ja amb marges en vora */
 .contingut{
@@ -502,25 +506,29 @@ select, input[type="text"],input[type="email"],input[type="password"]{
 /* Zona d'afegir noves càpsules */
 .add{
     font-size:0.8em;
+    margin:0;
+    margin-bottom: 30px;
 }
 .add input{
-    width:200px;
+    width:100%;
     border:none;
     border-bottom: solid 1px #dcdcdc;
     color: #999;
     font-size: .9em;
-    width:250px;
     padding-bottom:5px;
+    padding-top:5px;
 }
 .add button{
     text-align: center;
     margin-left: 15px;
     background-color: white;
-    color: #a00000;
+    color: #bd574e;
     border:0px transparent;
     cursor: pointer;
-    padding-top: 10px;
     padding-bottom: 10px;
+}
+.add-button{
+    text-align:right;
 }
 .rodo-mes{
     font-weight: 500;
@@ -570,9 +578,9 @@ select, input[type="text"],input[type="email"],input[type="password"]{
     text-decoration: none;
 }
 .capsula .collapse{
-    font-size:12px;
+    /*font-size:12px;
     margin-top:10px;
-    margin-left:45px;
+    margin-left:45px;*/
 }
 .capsule-info{
     margin-top: 20px;
@@ -601,19 +609,19 @@ select, input[type="text"],input[type="email"],input[type="password"]{
     display: block;
 }
 .table-wrapper-scroll-y::-webkit-scrollbar{
-  width: 11px;
+    width: 11px;
 }
 .table-wrapper-scroll-y{
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 .table-wrapper-scroll-y::-webkit-scrollbar-track{
-  background: var(--scrollbarBG);
+    background: var(--scrollbarBG);
 }
 .table-wrapper-scroll-y::-webkit-scrollbar-thumb{
-  background-color: var(--thumbBG) ;
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
 }
 .collapse {
     display: none
@@ -635,7 +643,7 @@ tbody.collapse.show {
     position: relative;
     height: 0;
     overflow: hidden;
-    transition: height .35s ease
+    transition: height .35s ease;
 }
 
 /* ----- 5. Data import ----- */
@@ -687,24 +695,24 @@ tbody.collapse.show {
     text-align: right;
 }
 .set-button a{
-    color: #a00000;    
+    color: #bd574e;    
 }
 .set-button a:hover{
-    color: #a00000;
+    color: #bd574e;
     text-decoration: underline;
 }
 .account-settings input{
     border: none;
     position: initial; 
     width: 298px; 
-    color:#a00000;
+    color:#bd574e;
 }
 .account-settings button{
     border:none;
     padding:0;
     margin:0;
     background-color: #fff;
-    color:#a00000;
+    color:#bd574e;
 }
 .account-settings button:hover{
     text-decoration: underline;

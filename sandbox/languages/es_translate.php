@@ -28,7 +28,7 @@ $text = array(
     "Espanyol" => "Español",
 
 // 3. Portada
-    "Titol" => "Monitoriza tus edificios",
+    "Titol" => "Monitoriza estructuras",
     "Subtitol" => "Innovamos para que las estructuras inteligentes aporten ",
     "Subtitol negrita" => "tranquilidad y felicidad.",
     "Sign up now" => "Regístrate ahora",
@@ -75,6 +75,8 @@ $text = array(
     "Subtotal" => "Subtotal",
     "Envio" => "Gastos de envío",
     "Promotional code" => "¿Tienes un código promocional?",
+    "Introduce codigo" => "Introduce el código aqui",
+    "Validar" => "Validar",
     "Total" => "Total",
     "Pagar" => "Pagar",
     "Includes" => "Incluye",

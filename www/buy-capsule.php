@@ -1,4 +1,10 @@
-<?php include_once("sections/languages.php"); ?>
+<?php
+if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
+  header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+  exit;
+}
+include_once("sections/languages.php");
+?>
 <!DOCTYPE html>
 <html lang="<?php echo $text['Lang']; ?>">
 	<head>
@@ -61,41 +67,58 @@
 					</div>
 					<div class="col-md-8">
 						<div class="row">
-							<form action="index.php">
+							<form action="#">
 							<div class="col-md-6">
 								<div class="buy-title">Capsule connectivity</div>
 								<div class="buy-specs">
-									Lorem ipsum dolor sit amet<br>
-									Consectetur adipiscing elit<br>
-									Vivamus augue metus<br>
-									Egestas vitae mauris a<br>
-									Auctor fermentum sem<br>
-									Mauris imperdiet pulvinar metus<br>
-									A convallis risus<br>
-									Donec lacinia velit et purus ullamcorper facilisis<br>
-									Phasellus elementum malesuada lobortis<br>
-									Proin ultrices et leo vel ultricies
+									Valores de tensión de cualquier elemento estructural,<br>
+									de forma no invasiva a partir de microdeformaciones.<br>
+									Monitorización en remoto,<br>
+									sin personal cualificado en obra.<br>
+									Datos en tiempo real y<br>
+									generación de patrones de comportamiento.<br>
+									Dispositivo sin cables,<br>
+									evitando material sensible en obra.<br>
+									Instalación automática:<br>
+									colocar y presionar, al alcance de cualquiera.
 								</div>
 								<div class="deliver">
 									<img src="img/deliver.jpg" alt="Types of delivery">
 								</div>
 							</div>
-							<div class="col-md-3 items">1<i class="fa fa-chevron-down"></i></div>
-							<div class="col-md-3 price">200,00 €</div>
+							<div class="col-md-3 items">
+								<select id="items" onchange="actualitzapreu()" id="">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+								<div class="select-arrow"></div>
+							</div>
+							<div class="col-md-3 price" id="preu">299,00 €</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="container">
+				<div class="container total-compra">
 					<div class="col-md-offset-4 col-md-8">
 						<div class="row totals">
 							<div class="col-md-6 concepte">
 								<div class="subtotal left"><?php echo $text['Subtotal']; ?></div>
 								<div class="entrega left"><?php echo $text['Envio']; ?></div>
-								<div class="codi-promo left"><?php echo $text['Promotional code']; ?></div>
+								<div class="codi-promo left"><a href="#promo" data-toggle="collapse"><?php echo $text['Promotional code']; ?></a></div>
+								<div id="promo" class="collapse">
+									<div class="ruby">
+										<form action="#" method="post">
+											<input type="text" name="codi-promo" placeholder="<?php echo $text['Introduce codigo']; ?>">
+											<button class="valida-promo" type="submit"><?php echo $text['Validar']; ?></button>
+										</form>
+									</div>
+								</div>
 							</div>
 							<div class="col-md-6 value">
-								<div class="subtotal right">200,00 €</div>
+								<div id="subtotal" class="subtotal right">299,00 €</div>
 								<div class="entrega right">0,00 €</div>
 							</div>
 						</div>
@@ -105,8 +128,8 @@
 								<div class="total left"><?php echo $text['Total']; ?>:</div>
 							</div>
 							<div class="col-md-6 value">
-								<div class="total right">200,00 €</div>
-								<div class="iva right"><?php echo $text['Includes']; ?> 34,71 € <?php echo $text['of VAT']; ?></div>
+								<div id="total" class="total right">299,00 €</div>
+								<div class="iva right"><?php echo $text['Includes']; ?> <span id="iva">51,89 €</span> <?php echo $text['of VAT']; ?></div>
 								<button class="pay" type="submit"><?php echo $text['Pagar']; ?></button>
 							</div>
 							</form>
