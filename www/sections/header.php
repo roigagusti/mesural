@@ -19,9 +19,9 @@
 		                        <div class="module left">
 		                            <ul class="menu">
 		                                <li class="has-dropdown">
-		                                    <a href="#services" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['Services']; ?></a>
+		                                    <a href="index.php#services" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['Services']; ?></a>
 		                                </li>
-										<li class="has-dropdown"><a href="#pricing" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['Pricing']; ?></a></li>
+										<li class="has-dropdown"><a href="buy-capsule.php" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['Pricing']; ?></a></li>
 		                                <li class="has-dropdown"><a href="https://app.mesural.com/login.php?lang=<?php echo $text['Lang']; ?>" hreflang="<?php echo $text['Lang']; ?>" target="_blank"><strong><?php echo $text['Login']; ?></strong></a></li>
 		                            </ul>
 		                        </div>

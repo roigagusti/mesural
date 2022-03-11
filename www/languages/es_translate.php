@@ -39,12 +39,13 @@ $text = array(
     "Try demo" => "Prueba la demo",
     "More information" => "Más información",
     "Buy" => "Comprar",
+    "Book" => "Reservar",
     "Paragraf capsula" => "Contiene la tecnología, de fácil instalación, que monitoriza estructuras a tiempo real y de forma remota garantizando la seguridad en la arquitectura gracias a la tranquilidad que ofrecen los datos.",
 
 // 5. Temps real i remot
     "Now and remotely" => "Ahora y en remoto",
     "Subtitol remot" => "Coloca y presiona: fácil instalación",
-    "Paragraf remot 1" => "Trabaja y toma decisiones seguras en tiempo real. La simple colocación de la cápsula en la estructura adquiere los valores de tensión de los elementos para el control y la interacción del equipo técnico.",
+    "Paragraf remot 1" => "Trabaja y toma decisiones seguras en tiempo real. La simple colocación de la cápsula en la estructura adquiere los valores de los elementos para el control y la interacción del equipo técnico.",
     "Paragraf remot 2" => "Tú decides dónde te ayudamos. Deja que la Cápsula de Mesural haga el resto.",
 
 // 6. Supported
@@ -64,18 +65,23 @@ $text = array(
     "Mesural on Facebook" => "Mesural en Facebook",
     
     "News" => "Notícias",
-    "Oct 23rd: We are already here" => "23 Oct: Ya estamos casi aquí",
+    "We are already here" => "Ya estamos casi aquí",
     "The building monitoring is now really" => "La monitorización en tiempo real es una realidad",
-    "Nov 02nd: Working hard night and day" => "02 Nov: Trabajando duro día y noche",
+    "Working hard night and day" => "Trabajando duro día y noche",
     "Hopefull our team is great" => "Por suerte nuestro equipo es el mejor",
-    "Nov 08th: Server tests are unbelievable" => "08 Nov: Los test de servidores son increibles",
+    "Server tests are unbelievable" => "Los test de servidores son increibles",
     "It's gonna be amazing, will you be here?" => "Será espectacular, ¿te lo vas a perder?",
 
 // 8 Buy
+    "Mesural Capsule" => "Cápsula Mesural",
     "Subtotal" => "Subtotal",
     "Envio" => "Gastos de envío",
     "Promotional code" => "¿Tienes un código promocional?",
     "Introduce codigo" => "Introduce el código aqui",
+    "Avis fallo" => "El código no es válido",
+    "Avis caducat" => "El código ha caducado",
+    "Avis utilitzat" => "El código ya se ha utilizado",
+    "Avis aplicat" => "El código se ha aplicado correctamente",
     "Validar" => "Validar",
     "Total" => "Total",
     "Pagar" => "Pagar",

@@ -63,6 +63,9 @@ try {
     $mail->setFrom('agusti@mesural.com','Agusti de Mesural');
     $mail->addAddress($to);                                     // Add a recipient
 
+    // Activo condificacción utf-8
+    $mail->CharSet = 'UTF-8';                                   // Set UTF-8
+    
     // Content
     $mail->isHTML(true);                                        // Set email format to HTML
     $mail->Subject = $subject;

@@ -11,11 +11,10 @@ function token($longitud) {
 }
 
 if(isset($_POST["email"])&&isset($_POST["password"])&&isset($_POST["re-password"])) {
-	$profile = $_POST["profile"];
+	$nom = $_POST["name"];
 	$email = $_POST["email"];
 	$password = $_POST["password"];
 	$repassword = $_POST["re-password"];
-	$nom = explode("@",$email);
 
 	if($password != $repassword){
 		header('Location: ../register.php?lang='.$_GET['lang'].'&event=pass-differents');
@@ -30,7 +29,7 @@ if(isset($_POST["email"])&&isset($_POST["password"])&&isset($_POST["re-password"
 				"email" => $email,
 				"password" => password_hash($password, PASSWORD_DEFAULT),
 				"create_date" => date('Y-m-d H:i:s'),
-				"nom" => $nom[0],
+				"nom" => $nom,
 				"emailconfirmed" => 0,
 				"language" => "english",
 				"token" => token(64)

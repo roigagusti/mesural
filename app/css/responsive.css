@@ -1,10 +1,10 @@
 /*
-* Title: App. Responsive
+* Title: Responsive
 * Author: Aldasoro
-* Template: Mesural
-* Version: 0.1.1
-* Copyright 2020 Mesural Inc.
-* Url: https://www.mesural.com
+* Template: Aldasoro
+* Version: 1.0
+* Copyright 2021 Aldasoro Inc.
+* Url: https://www.aldasoro.ml
 
 
 Content table
@@ -16,77 +16,59 @@ Content table
 5. Devices < width: 460px
 6. Responsive menu
 
-/* ----- Devices < width: 1350px ----- */
-@media (max-width: 1350px) {
-	.navegador li{
-    	padding-left:30px;
+/* ----- Base ----- */
+.responsive-blur{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 11;
+	top: 0;
+	background: #fff;
+	background: rgba(247,250,252,0.85);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+}
+/* ----- Devices < width: 1492px ----- */
+@media (max-width: 1492px) {
+	.dadesFactura{
+		width: 100% !important;
 	}
-	.navegador .active{
-	    padding-left:27px;
+}
+/* ----- Devices < width: 991px ----- */
+@media (max-width: 991px) {
+	.menuChevron{
+		display: none !important;
 	}
-	/*.lateral{
-	    width:20vw;
-	}*/
-	.board{
-	    width:80vw;
+	.analytics-page>.offset-2{
+		margin-left:0!important;
+	}
+
+}
+
+/* ----- Devices < width: 770px ----- */
+@media (max-width: 767px) {
+	.plansSuscripcio>.offset-1{
+		margin-left:0!important;
 	}
 }
 
-/* ----- Devices < width: 1260px ----- */
-@media (max-width: 1260px) {
-	.title{
-		width:180px !important;
-	}
-	.contingut{
-		padding-left:30px !important;
-	}
-}
-
-/* ----- Devices < width: 920px ----- */
-@media (max-width: 920px) {
-	.lateral{
+/* ----- Devices < width: 714px ----- */
+@media (max-width: 714px) {
+	.fullFactura{
 		display:none;
 	}
-	.board{
-		margin-left: 0 !important;
-		width:100% !important;
-		padding-top:60px;
-		z-index:1;
-		position:relative;
+	.avisNoFactura{
+		display:initial;
 	}
-	.lateral-header-mobile{
-		display: initial;
-	}
-	.lateral-footer-mobile{
-		display: initial;
-	}
-	.contingut{
-		padding-right:30px !important;
-	}
-}
-
-/* ----- Devices < width: 650px ----- */
-@media (max-width: 650px) {
 }
 
 /* ----- Devices < width: 468px ----- */
 @media (max-width: 468px) {
-    .logo{
-        margin-bottom:25px;
-    }
-    .logo img{
-        width:240px;
-    }  
-	.new input{
+	.month-count{
 		text-align: center;
-	}
-	.account-settings li{
 		margin-bottom:20px;
 	}
-	.add input{
-		width:200px;
-	}
-	.title{
-		width:150px !important;
+	.add-fitxatge{
+		text-align: center;
 	}
 }

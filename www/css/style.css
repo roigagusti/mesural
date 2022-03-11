@@ -95,6 +95,64 @@ p a:hover{
 	margin-top:150px;
 	text-align:right;
 }
+.mesuralDevices{
+    -moz-box-pack: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0px auto;
+	margin-top:0px;
+	margin-bottom:80px;
+}
+.mesuralDevices a{
+	color:#333;
+}
+.deviceTitle{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -moz-box-orient: vertical;
+    font-weight: 300;
+    overflow-wrap: break-word;
+    margin-top:5px;
+    font-size: 0.9em;
+    color:#666;
+}
+.device{
+    -moz-box-pack: center;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-align: center;
+    outline: currentcolor none medium;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    margin-left:20px;
+    margin-right:20px;
+    flex-direction: column;
+    hyphens: auto;
+    justify-content: center;
+    max-width: 15%;
+    min-width: 0px;
+    padding: 0px 2px;
+    text-align: center;
+    text-decoration: none;
+}
+.deviceLogo{
+    height: 30px;
+    margin-bottom: 2px;
+    padding: 0px;
+    width: 30px;
+    color:#666;
+}
+.buyDevice{
+	margin-bottom:20px !important;
+	position: relative;
+	z-index: 10;
+}
 
 /* ----- 4. Buy capsule ----- */
 #capsule{
@@ -244,6 +302,16 @@ p a:hover{
 	border-radius: 4px !important;
 	letter-spacing:0 !important;
 }
+#promo .alert-zone{
+	padding-left:10px;
+}
+.fail{
+    color: rgb(165,0,0);    
+}
+.success{
+    color: rgb(0,90,0);    
+}
+
 .totals{
 	padding-bottom: 20px;
 	border-bottom:1px solid #999;

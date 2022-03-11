@@ -19,7 +19,7 @@ include_once("sections/languages.php");
   	<meta name="title" content="Mesural">
 
 	<!-- Títol i Favicons -->
-	<title>Mesural | Monitorización de estructuras</title>
+	<title>Mesural. Monitorización de estructuras</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!-- CSS Libraries -->
@@ -84,15 +84,46 @@ include_once("sections/languages.php");
 		<hr></hr>
 
 		<section>
+			
+
 			<div class="container center">
 				<h2><?php echo $text['Titol capsula']; ?></h2>
 				<h3><?php echo $text['Subtitol capsula']; ?></h3>
 				<div class="capsule-buttons">
-					<a href="buy-capsule.php" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['Buy']; ?></a> <i class="fas fa-chevron-right"></i>
+					<a href="buy-capsule.php" hreflang="<?php echo $text['Lang']; ?>"><?php echo $text['Book']; ?></a> <i class="fas fa-chevron-right"></i>
 				</div>
 
 				<div class="col-sm-12">
-					<img alt ="Mesural capsule" id="capsule" src="img/capsule.png" />
+					<img alt ="Mesural capsule" id="capsule" src="img/capsule-bos.png" />
+				</div>
+
+				<div class="col-sm-12 mesuralDevices">
+					<a class="device" href="buy-capsule.php?id=bos">
+				      <div class="deviceLogo">
+				        <svg style="height: 100%; width: 100%; display: block; overflow: visible;" viewBox="0 0 24.75 24.75" fill="currentColor" fill-opacity="0" stroke="currentColor" stroke-width="1" focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round">
+				          <g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><rect class="cls-1" x="0.38" y="0.38" width="24" height="24" rx="6.86"/><circle class="cls-1" cx="12.38" cy="12.38" r="6.06" transform="translate(-3.79 19.07) rotate(-67.5)"/></g></g>
+				        </svg>
+				      </div>
+				      <div class="deviceTitle">Mesural Bos</div>
+				    </a>
+
+				    <a class="device" href="buy-capsule.php?id=quar">
+				      <div class="deviceLogo">
+				        <svg style="height: 100%; width: 100%; display: block; overflow: visible;" viewBox="0 0 24.75 24.75" fill="currentColor" fill-opacity="0" stroke="currentColor" stroke-width="1" focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round">
+				          <g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><rect class="cls-1" x="0.38" y="0.38" width="24" height="24" rx="6.86"/></g></g>
+				        </svg>
+				      </div>
+				      <div class="deviceTitle">Mesural Quar</div>
+				    </a>
+
+				    <a class="device" href="buy-capsule.php?id=lep">
+				      <div class="deviceLogo">
+				        <svg style="height: 100%; width: 100%; display: block; overflow: visible;" viewBox="0 0 25 25" fill="currentColor" fill-opacity="0" stroke="currentColor" stroke-width="1" focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round">
+				          <g id="Capa_2" data-name="Capa 2"><g id="Capa_1-2" data-name="Capa 1"><g id="Capa_1-2-2" data-name="Capa 1-2"><rect class="cls-1" x="0.5" y="0.5" width="24" height="24" rx="6.86"/></g><circle class="cls-2" cx="12.5" cy="12.5" r="1.98"/></g></g>
+				        </svg>
+				      </div>
+				      <div class="deviceTitle">Mesural Lep</div>
+				    </a>
 				</div>
 
 				<div class="col-md-6 col-md-push-3">

@@ -26,10 +26,11 @@ function enlace_correo() {
 }
 usuario = "info", dominio = "mesural.com", conector = "@";
 
-function actualitzapreu(){
+
+function actualitzapreu(preu){
   var items = document.getElementById("items").value;
-  var preu = 299.00;
-  var total = items*preu;
+  var discount = document.getElementById('discount').value;
+  var total = (1-discount/100)*items*preu;
   var iva = total-total/1.21;
   document.getElementById('preu').innerHTML = total.toFixed(2).replace(".", ",")+" €";
   document.getElementById('subtotal').innerHTML = total.toFixed(2).replace(".", ",")+" €";

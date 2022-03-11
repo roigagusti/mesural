@@ -23,9 +23,9 @@
     </ul>
     <ul class="col-md-3">
       <li class="footer-titol"><a><?php echo $text['News']; ?></a></li>
-      <li><a><?php echo $text['Oct 23rd: We are already here']; ?></a><span class="footer-message"><?php echo $text['The building monitoring is now really']; ?></span></li>
-      <li><a><?php echo $text['Nov 02nd: Working hard night and day']; ?></a><span class="footer-message"><?php echo $text['Hopefull our team is great']; ?></span></li>
-      <li><a><?php echo $text['Nov 08th: Server tests are unbelievable']; ?></a><span class="footer-message"><?php echo $text["It's gonna be amazing, will you be here?"]; ?></span></li>
+      <li><a><?php echo date('F jS',mktime(0,0,0,date('m'),date('d')-12,date('Y'))).": ".$text['We are already here']; ?></a><span class="footer-message"><?php echo $text['The building monitoring is now really']; ?></span></li>
+      <li><a><?php echo date('F jS',mktime(0,0,0,date('m'),date('d')-8,date('Y'))).": ".$text['Working hard night and day']; ?></a><span class="footer-message"><?php echo $text['Hopefull our team is great']; ?></span></li>
+      <li><a><?php echo date('F jS',mktime(0,0,0,date('m'),date('d')-3,date('Y'))).": ".$text['Server tests are unbelievable']; ?></a><span class="footer-message"><?php echo $text["It's gonna be amazing, will you be here?"]; ?></span></li>
     </ul>
   </div>
   <div class="copyright col-md-12">

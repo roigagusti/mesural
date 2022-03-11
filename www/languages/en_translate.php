@@ -39,12 +39,13 @@ $text = array(
     "Try demo" => "Try demo",
     "More information" => "More information",
     "Buy" => "Buy",
+    "Book" => "Book",
     "Paragraf capsula" => "This easy-to-install technology monitors structures remotely and in real time, guaranteeing building health and safety thanks to the reliable data it provides.",
 
 // 5. Temps real i remot
     "Now and remotely" => "Now and remotely",
     "Subtitol remot" => "Place and press: easy installation",
-    "Paragraf remot 1" => "Work and make safe decisions in real time. Once the capsule is placed on a structure it collects strain data values so that a technical team can monitor building health and intervene accordingly.",
+    "Paragraf remot 1" => "Work and make safe decisions in real time. Once the capsule is placed on a structure it collect values so, a technical team can monitor building health and intervene accordingly.",
     "Paragraf remot 2" => "Decide where you need structural monitoring and let the Mesural Capsule do the rest.",
 
 // 6. Supported
@@ -64,18 +65,23 @@ $text = array(
     "Mesural on Facebook" => "Mesural on Facebook",
     
     "News" => "News",
-    "Oct 23rd: We are already here" => "Oct 23rd: We are already here",
+    "We are already here" => "We are already here",
     "The building monitoring is now really" => "The building monitoring is now really",
-    "Nov 02nd: Working hard night and day" => "Nov 02nd: Working hard night and day",
+    "Working hard night and day" => "Working hard night and day",
     "Hopefull our team is great" => "Hopefull our team is great",
-    "Nov 08th: Server tests are unbelievable" => "Nov 08th: Server tests are unbelievable",
+    "Server tests are unbelievable" => "Server tests are unbelievable",
     "It's gonna be amazing, will you be here?" => "It's gonna be amazing, will you be here?",
 
 // 8 Buy
+    "Mesural Capsule" => "Mesural Capsule",
     "Subtotal" => "Subtotal",
     "Envio" => "Delivery fees",
     "Promotional code" => "Do you have a promotional code?",
     "Introduce codigo" => "Place your code here",
+    "Avis fallo" => "The code is not valid",
+    "Avis caducat" => "The code has expired",
+    "Avis utilitzat" => "The code is already used",
+    "Avis aplicat" => "Code applied successfully",
     "Validar" => "Check",
     "Total" => "Your total",
     "Pagar" => "Pay",

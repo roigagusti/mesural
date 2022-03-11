@@ -1,720 +1,189 @@
 /*
-* Title: App. Style
+* Title: Style
 * Author: Aldasoro
-* Template: Mesural
-* Version: 0.1.1
-* Copyright 2020 Mesural Inc.
-* Url: https://www.mesural.com
+* Template: Aldasoro
+* Version: 1.0
+* Copyright 2021 Aldasoro Inc.
+* Url: https://www.aldasoro.ml
 
 
 Content table
 --------------
-1. Fonts
-2. Codi general
-3. Login i registre
-4. Navegador i navegador mòbil
-5. Dashboard
+0. Center
+1. Sidebar
+2. Index
+3. Configuració
 
-/* ----- 1. Fonts ----- */
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
-@font-face {
- font-family:Rubik;
- font-style:normal;
- font-weight:300;
- font-display:swap;
- src:local('Rubik Light'),
- local('Rubik-Light'),
- url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Fqj2md8WU.ttf) format('truetype')
+
+/* ----- 0. Basics ----- */
+.center{
+    text-align: center !important;
 }
-@font-face {
- font-family:Rubik;
- font-style:normal;
- font-weight:400;
- font-display:swap;
- src:local('Rubik'),
- local('Rubik-Regular'),
- url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXk.ttf) format('truetype')
+.right{
+    text-align: right !important;
 }
-@font-face {
- font-family:Rubik;
- font-style:normal;
- font-weight:500;
- font-display:swap;
- src:local('Rubik Medium'),
- local('Rubik-Medium'),
- url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjmmd8WU.ttf) format('truetype')
-}
-@font-face {
- font-family:Rubik;
- font-style:normal;
- font-weight:700;
- font-display:swap;
- src:local('Rubik Bold'),
- local('Rubik-Bold'),
- url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iGmd8WU.ttf) format('truetype')
+.left{
+    text-align: left !important;
 }
 
-/* ----- 2.Codi general ----- */
-html{
-    height:100%;
-}
-body{
-    background:#fff;
-    height:100%;
- 	margin:0;
-    font-family: 'Rubik','Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Arial','Verdana',serif;
-}
-a{
-    text-decoration: none;
-}
-select, input[type="text"],input[type="email"],input[type="password"]{
-    -webkit-appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-.access{
-    background:#f2f2f2;
-}
-.hidden{
-    display: none !important;
-}
-.fail,.success{
-    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
-    font-size: .9em;
-    font-weight: 300;
-    text-align:center;
-}
-.fail{
-    color: rgb(165,0,0);    
-}
-.success{
-    color: rgb(0,165,0);    
+/* ----- 1. Sidebar ----- */
+#sidebar-menu svg{
+    fill:#7b8190;
+    height:13px;
 }
 
-/* -----  3. Login i registre ----- */
-.limiter{
-    width: 100%;
-    margin: 0 auto;
+/* ----- 2. Index ----- */
+.card-body > .full-icon{
+    padding-top: 180px;
+    padding-bottom: 200px;
 }
-.content{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+.full-icon > .nav-icon{
+    fill:#ccc;
     position: relative;
-    z-index: 1;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+    top: 0;
 }
-.box{
-    border-radius: 10px;
-    overflow: hidden;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-    -webkit-box-shadow: 0 5px 10px 0
-    rgba(0,0,0,.1);
-    -o-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-    -ms-box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-    text-align:center;
-    width: 400px;
-}
-.box-register{
-    margin-top:15vh;
-}
-.box-login{
-    margin-top:20vh;
-}
-.box .logo{
-    margin-bottom:30px;
-    font-size:35px;
-    font-weight:bold;
-}
-.box .logo img{
-    width:200px;
-}
-.terms{
-    position:relative;
-    width:270px;
-    margin-left:60px;
-    font-size: .8em;
-    font-weight: 300;
-    color: #999;
-}
-.terms a{
-    color: #999;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;    
-}
-.terms a:hover{
-    color: #292929;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;    
-}
-.submit-zone{
-    margin-top:20px;
-}
-.box input, .box textarea{
-    border: solid 1px #dcdcdc;
-    margin-right: 10px;
-    margin-bottom:15px;
-    padding-left: 1rem;
-    color: #999;
-    height: 3rem;
-    font-size: .9em;
-    border-radius: 6px;
-    width:250px;
-}
-.box select{
-    border: solid 1px #dcdcdc;
-    margin-right: 10px;
-    margin-bottom:15px;
-    padding-left: 1rem;
-    color: #999;
-    height: 3rem;
-    font-size: .9em;
-    border-radius: 6px;
-    width:269px;
-}
-.box input[type="checkbox"]{
-    height:15px;
-    width:15px;
-    display: inline-block;
-    top: 3px;
-    position: relative;
-}
-.box button{
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    border-radius: 4px;
-}
-.btn-acces{
-    background: rgba(160,0,0,1);
-    margin-right: 0px;
-    color: #fff;
-    height: 2.5rem;
-    margin-top: 0px;
-    width: 150px;
-    font-size: .8em;
-    text-transform: uppercase;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
-}
-.btn-acces:hover{
-    background: rgba(160,0,0,0.5);
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-.btn-apple{
-    background: rgba(0,0,0,0);
-    color: #292929;
-    width: 150px;
-    font-size: .8em;
-    border: 1px solid #292929;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
-    font-weight: 400;
-    text-align: center;
-    border-radius: 4px;
-    padding: 10px 0px 11px 0px;
-    display: inline-block;
-}
-.btn-apple:hover{
-    background: rgba(0,0,0,1);
-    color: #fff;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-.forgot-zone{
-    margin-top:20px;
-}
-.forgot{
-    font-family: 'Roboto','Helvetica','Myriad Set Pro','Lucida Grande','Helvetica Neue','Helvetica','Arial','Verdana',serif;
-    font-size: .8em;
-    font-weight: 300;
-    color: #999;    
-}
-.forgot .cta{
-    margin-top:10px;
-    display: block;
-}
-.forgot .cta a{
-    color:#bd574e;
-}
-.forgot a{
-    text-decoration:none;
-    color: #999;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-.forgot a:hover{
-    color: #333;
-    -moz-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-}
-.alert-zone{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    position: relative;
-    z-index: 1;
-    margin-top:20px;
-}
-
-/* ----- 4. Navegador i navegador mòbil ----- */
-.lateral-logo{
-    width:100%;
-    text-align: center;
-    padding-top:40px;
-}
-.lateral-logo img{
-    width:100px;
-}
-.profile{
-    text-align:center;
-    padding-top:60px;
-}
-.profile img{
-    width:40px;
-    border-radius: 50%;
-    box-shadow:0px 0px 3px rgba(0, 0, 0, .5);;
-}
-.profile .initials{
-    padding:10px;
-    border-radius: 50%;
-    background-color: rgba(160,0,0,0.2);
-    color:#fff;
-    box-shadow:0px 0px 3px rgba(0, 0, 0, .2);;
-}
-.profile-name{
-    margin-top: 20px;
-    color:#999;
-    font-size: 0.8em;
-}
-.dropdown-arrow{
-    font-size: 0.5em;
-    vertical-align: top;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-.navegador{
-    margin-top:100px;
-    text-align: left;
-    list-style: none;
-    width:100%;
-    padding-left:0px;
-    font-size: 0.8em;
-}
-.navegador a{
-    text-decoration: none;
-    color:#999;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;  
-}
-.navegador li{
-    margin-top:15px;
-    padding-top:5px;
-    margin-bottom:15px;
-    padding-bottom:5px;
-    padding-left:50px;
-}
-.navegador .active{
-    border-left:3px solid #bd574e;
-    padding-left:47px;
-}
-.navegador .active a{
-    color:#666;
+.full-icon h1{
+    font-size: 18px;
+    color: #495057;
     font-weight: 500;
+    margin: 0;
 }
-.navegador a:hover{
-    color:#ccc;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;  
-}
-.navegador-footer{
-    position: absolute;
-    bottom:0px;
-    height:40px;
-    text-align: center;
-    font-size: 0.8em;
-    width:100%;
-    color:#999;
-}
-.navegador-footer a{
-    color:#aaa;    
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;  
-}
-.navegador-footer a:hover{
-    color:#ccc;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;  
-}
-/* El lateral es converteix en header en versió mòbil */
-.lateral-header-mobile{
-    display:none;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    top:0;
-    z-index: 5;
-    background: rgb(160,0,0);
-}
-.mobile-logo{
-    text-align: center;
-}
-.mobile-logo img{
-    height: 30px;
-    margin-top:15px;
-}
-.mobile-bars{
-    position:absolute;
-    top:22px;
-    right:30px;
-    color:#fff;
-}
-
-/* El lateral es converteix en footer en versió mòbil */
-.lateral-footer-mobile{
-    display:none;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    bottom:0;
-    z-index: 5;
-    background-color: #f8fafb;
-    border-top: 1px solid #dcdcdc;
-}
-.navegador-mobile{
-    list-style: none;
-    padding-top:7px;
-    padding-left: 0;
-}
-.navegador-mobile li{
-    display: inline;
-    text-align: center;
-    font-size: 0.85em;
-}
-.navegador-mobile a{
-    text-decoration: none;
-    color:#999;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in;  
-}
-.navegador-mobile a:hover{
-    color:#ccc;
-    -moz-transition: all 0.1s ease-in;
-    -webkit-transition: all 0.1s ease-in;
-    -o-transition: all 0.1s ease-in;
-    transition: all 0.1s ease-in; 
-}
-.navegador-mobile .active{
-    font-weight: 500;
-    padding-bottom:16px;
-    border-bottom:3px solid #bd574e;
-}
-.navegador-mobile .active a{
-    color:#666 !important;
-    font-weight: 500;
-}
-
-/* ----- 5. Dashboard ----- */
-.page{
-    flex-wrap: wrap;
-    padding: 0px;
-    position: relative;
-    z-index: 1;
-}
-.lateral{
-    float:left;
-    height:100%;
-    background-color: #f8fafb;
-    position: fixed !important;
-    z-index: 5;
-    padding-right:0px;
-    padding-left:0px;
-}
-/* Espai blanc per mostrar dades */
-.board{
-    position: relative;
-    float:none !important;
-    z-index:1;
-}
-/* Espai ja amb marges en vora */
-.contingut{
-    padding-left:50px;
-    padding-top:30px;
-}
-/* Zona d'afegir noves càpsules */
-.add{
-    font-size:0.8em;
-    margin:0;
-    margin-bottom: 30px;
-}
-.add input{
-    width:100%;
-    border:none;
-    border-bottom: solid 1px #dcdcdc;
-    color: #999;
-    font-size: .9em;
-    padding-bottom:5px;
-    padding-top:5px;
-}
-.add button{
-    text-align: center;
-    margin-left: 15px;
-    background-color: white;
-    color: #bd574e;
-    border:0px transparent;
-    cursor: pointer;
-    padding-bottom: 10px;
-}
-.add-button{
-    text-align:right;
-}
-.rodo-mes{
-    font-weight: 500;
-    border-radius: 50%;   
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1); 
-    width: 30px;
+.full-icon h2{
     font-size: 14px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-/* Zona de càpsules */
-.capsulas{
-    padding-top:50px;
-}
-/* Cada una de les càpsules */
-.capsula{
-    margin-bottom: 25px;
-}
-.capsula img{
-    height: 30px;
-}
-.capsula .title{
-    display: inline-block;
-    width: 300px;
-    margin-left:10px;
-}
-.capsula .name{
-    font-size: 12px;
-    margin-bottom:2px;
-}
-.capsula .updated{
-    font-size: 10px;
-    color:#ccc;
-}
-.capsula .value{
-    display: inline-block;
-    font-size: 12px;
-}
-.capsula .arrow{
-    display: inline-block;
-    color:#ccc;
-    font-size: 12px;
-    margin-left:15px;
-}
-.arrow a{
-    color:#ccc;
-    text-decoration: none;
-}
-.capsula .collapse{
-    /*font-size:12px;
-    margin-top:10px;
-    margin-left:45px;*/
-}
-.capsule-info{
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 80%;
-}
-/* Dades de cada càpsula */
-.table-data{
-    width:80% !important;
-}
-.table thead th{
-    border-bottom: 1px solid #dee2e6 !important;
-}
-.table th{
-    border-top: none !important;
-}
-.table tbody{
-    text-align: center;
-}
-.my-custom-scrollbar {
-    position: relative;
-    height: 350px;
-    overflow: auto;
-}
-.table-wrapper-scroll-y {
-    display: block;
-}
-.table-wrapper-scroll-y::-webkit-scrollbar{
-    width: 11px;
-}
-.table-wrapper-scroll-y{
-    scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
-.table-wrapper-scroll-y::-webkit-scrollbar-track{
-    background: var(--scrollbarBG);
-}
-.table-wrapper-scroll-y::-webkit-scrollbar-thumb{
-    background-color: var(--thumbBG) ;
-    border-radius: 6px;
-    border: 3px solid var(--scrollbarBG);
-}
-.collapse {
-    display: none
-}
-
-.collapse.show {
-    display: block
-}
-
-tr.collapse.show {
-    display: table-row
-}
-
-tbody.collapse.show {
-    display: table-row-group
-}
-
-.collapsing {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: height .35s ease;
-}
-
-/* ----- 5. Data import ----- */
-.import{
-    text-align: center;
-    padding-top:45vh;
-    font-size:14px;
-    color:#aaa;
-}
-
-/* ----- 6. Settings ----- */
-.settings{
-    padding-left:50px !important;
-    padding-top:45px !important;
-}
-.settings h2{
-    font-size:16px;
-    margin:0;
-    font-weight: 500;
-}
-.settings ul{
-    margin-top:50px;
-    padding-left:10px;
-    padding-right:10px;
-    list-style: none;
-}
-.account-settings li{
-    height:40px;
-    font-size: 12px;
-}
-.set-title, .set-value, .set-button{
-    display: inline-block;
-    height:18px;
-    margin-top:3px;
-}
-.set-title{
-    width:170px;
-    font-weight: 500;
     color: #666;
-}
-.set-value{
-    width:300px;
-    font-weight: 300;
-    color: #999;
-}
-.set-button{
-    width:75px;
     font-weight: 400;
-    text-align: right;
+    margin: 0;
+    margin-bottom: 50px;
 }
-.set-button a{
-    color: #bd574e;    
+
+
+/* ----- 3. Configuració ----- */
+.dadesConfig{
+    padding-left:0;
+    list-style:none;
 }
-.set-button a:hover{
-    color: #bd574e;
-    text-decoration: underline;
+.dadesTitles{
+    color:#999;
+    display:inline-block;
+
+    max-width:40%;
+    position:relative;
+    width:100%;
+    padding-right:10px;
+    padding-left:10px;
 }
-.account-settings input{
-    border: none;
-    position: initial; 
-    width: 298px; 
-    color:#bd574e;
+.dadesFacturacio{
+    max-width:60%;
+    position:relative;
+    width:100%;
+    padding-right:10px;
+    padding-left:10px;
 }
-.account-settings button{
+.planTitle{
+    width:100%;
+    text-align:center;
+}
+.planTitle i{
+    font-size:25px;
+}
+.plansSuscripcio>.plan{
+    border: #dcdcdc 1px solid;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.plansSuscripcio>.plan.active{
+    border: #bd574e 1px solid;
+}
+.plansSuscripcio>.plan a{
+    color:#333;
+}
+.panellBilling{
+    margin-top:30px;
+}
+#name,#card_number,#card_expiry,#card_cvc{
+    width:100%;
     border:none;
-    padding:0;
-    margin:0;
-    background-color: #fff;
-    color:#bd574e;
+    font-weight:400;
+    font-family:'Roboto', Open Sans, Segoe UI, sans-serif;
+    font-size:16px;
+    color: #555;
 }
-.account-settings button:hover{
-    text-decoration: underline;
+.notificacio{
+    position:absolute;
+    z-index:99999;
+    right: 20px;
+}
+
+/* ----- 4. Switch ----- */
+.label {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+  }
+  .switch,
+  .input:checked + .label .left,
+  .input:not(:checked) + .label .right {
+    pointer-events: all;
     cursor: pointer;
+  }
+  .input {
+    display: none;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bd574e;
+    -webkit-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+  }
+  input:checked + .label .slider {
+    background-color: #bd574e;
+  }
+  input:focus + .label .slider {
+    box-shadow: 0 0 1px #bd574e;
+  }
+  input:checked + .label .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+  .slider.round {
+    border-radius: 20px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .left, .right {
+    margin: 0 .5em;
+  }
+
+/* ----- 5. WebApp ----- */
+.webApp-offset{
+  padding-top:40px;
 }

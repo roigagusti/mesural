@@ -18,7 +18,7 @@ include_once("sections/languages.php");
   	<meta name="title" content="Mesural">
 
 	<!-- Títol i Favicons -->
-	<title>Mesural | Legal</title>
+	<title>Mesural. Legal</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<!-- CSS Libraries -->

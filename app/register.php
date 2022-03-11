@@ -6,10 +6,6 @@ if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
 }
 #Incloure direcció dels arxius de traducció
 include_once("sections/languages.php");
-
-/*if(isset($_GET['profile'])){
-  $profile = $_GET['profile'];
-}*/ 
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $text['lang']; ?>">
@@ -18,64 +14,77 @@ include_once("sections/languages.php");
   <?php include_once("sections/metadata.php"); ?>
 
   <!-- Títol i Favicons -->
-  <title>Mesural | Register</title>
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Mesural. Register</title>
+  <link rel="shortcut icon" href="img/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/site.webmanifest">
 
   <!-- CSS Libraries -->
   <!-- CSS Custom -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/access.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/access-responsive.css" media="screen">
 
   <!-- Scripts Libraries -->
   <!-- Scripts custom -->
 </head>
 
-<body class="access">
-<?php include_once("sections/analytics.php") ?>
+<body>
 <!-- Contingut de pàgina -->
-<div class="limiter">
-  <div class="content">
-    <div class="box box-register">
-      <div class="logo"><?php echo $text['Sign up']; ?></div>
-
-      <form class="form-signin" action="conexiones/register.php?lang=<?php echo $text['lang']; ?>" method="post">
-        <!--<select id="profile" name="profile" required>
-          <option value="0"><?php echo $text['Choose your profile']; ?></option>
-          <option value="1"><?php echo $text['Architect']; ?></option>
-          <option value="2"><?php echo $text['Engineer']; ?></option>
-          <option value="3"><?php echo $text['Constructor']; ?></option>
-          <option value="4"><?php echo $text['Promotor']; ?></option>
-          <option value="5"><?php echo $text['Assurance']; ?></option>
-        </select>-->
-        <input type="email" id="email" name="email" placeholder="<?php echo $text['Your email']; ?>" required>
-        <input type="password" id="password" name="password" placeholder="<?php echo $text['Password']; ?>" required>
-        <input type="password" id="re-password" name="re-password" placeholder="<?php echo $text['Repeat password']; ?>" required>
-        <div class="terms">
-          <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required><?php echo $text['Agree with']; ?> <a href="//www.mesural.com/legal.php" target="_blank" class="term-service"><?php echo $text['Terms of service']; ?></a>
-        </div>
-        <div class="submit-zone">
-          <button class="btn-acces" type="submit"><?php echo $text['Register']; ?></button>
-        </div>
-        <div class="forgot-zone">
-          <div class="forgot">
-            <span class="cta"><?php echo $text['Already member']; ?> <a href="login.php?lang=<?php echo $text['lang']; ?>" class="sign-up">Log in</a></span>
-          </div>
-        </div>
-      </form>
+<div class="register-content">
+  <div class="left-side">
+    <div class="franja-left">
+      <div class="logo-register">
+        <a href="//www.mesural.com"><img src="img/logo-dark.png" /></a>
+      </div>
     </div>
   </div>
-  <div class="alert-zone">
-    <div class="fail <?php if($_GET['event'] == 'email-exists'){}else{echo 'hidden';}?>"><?php echo $text['Email exists']; ?></div>
-    <div class="fail <?php if($_GET['event'] == 'pass-differents'){}else{echo 'hidden';}?>"><?php echo $text['Pass differents']; ?></div>
-    <div class="fail <?php if($_GET['event'] == 'not-profile'){}else{echo 'hidden';}?>"><?php echo $text['Not profile']; ?></div>
-    <div class="fail <?php if($_GET['event'] == 'email-fail'){}else{echo 'hidden';}?>"><?php echo $text['Email-fail']; ?></div>
-    <div class="success <?php if($_GET['event'] == 'success'){}else{echo 'hidden';}?>"><?php echo $text['Register success']; ?></div>
+  <div class="right-side">
+    <div class="franja-right box box-register">
+      <div class="register-title"><?php echo $text['Create your Mesural account']; ?></div>
+
+      <form class="form-signin" action="conexiones/register.php?lang=<?php echo $text['lang']; ?>" method="post">
+        <div class="login-input">
+          <label for="name"><?php echo $text['Full name']; ?></label>
+          <input type="text" id="name" name="name" placeholder="Gavin Belson" required>
+          <label for="email"><?php echo $text['Email']; ?></label>
+          <input type="text" id="email" name="email" placeholder="gavin@hooli.com" required>
+          <label for="password"><?php echo $text['Password']; ?></label>
+          <input type="password" id="password" name="password" placeholder="********" required>
+          <label for="re-password"><?php echo $text['Confirm password']; ?></label>
+          <input type="password" id="re-password" name="re-password" placeholder="********" required>
+          <div class="terms">
+            <!-- Pot ser "checked", "disabled" o "checked disabled"-->
+            <input type="checkbox" name="agree-term" id="agree-term" onchange="termsChanged()"><?php echo $text['Agree']; ?> <a href="//www.mesural.com/legal.php" target="_blank" class="term-service" required><?php echo $text['Terms of service']; ?></a>
+          </div>
+        </div>
+
+        <div class="submit-zone">
+          <button class="btn-access disabled" type="submit"><?php echo $text['Create account']; ?></button>
+        </div>
+      </form>
+      <div class="alert-zone">
+      <div class="register"><?php echo $text['Have account']; ?> <a href="login.php?lang=<?php echo $text['lang']; ?>"><?php echo $text['Log in']; ?></a></div>
+        <div class="fail <?php if($_GET['event'] == 'email-exists'){}else{echo 'hidden';}?>"><?php echo $text['Email exists']; ?></div>
+        <div class="fail <?php if($_GET['event'] == 'pass-differents'){}else{echo 'hidden';}?>"><?php echo $text['Pass differents']; ?></div>
+        <div class="fail <?php if($_GET['event'] == 'email-fail'){}else{echo 'hidden';}?>"><?php echo $text['Email-fail']; ?></div>
+        <div class="success <?php if($_GET['event'] == 'success'){}else{echo 'hidden';}?>"><?php echo $text['Register success']; ?></div>
+      </div>
+    </div>
   </div>
 </div>
 <!-- JavaScripts basics -->
+<script src="lib/jquery/jquery.min.js"></script>
 <!-- JavaScripts custom -->
 <script type="text/javascript" src="js/script.js"></script>
 <!-- Scripts custom -->
-
+<script>
+if (window.navigator.userAgent.indexOf('iPhone') != -1) {
+  if (window.navigator.standalone == true) {
+    alert("Yes iPhone! Yes Full Screen!");
+  }
+}
+</script>
 </body>
 </html>
