@@ -7,6 +7,7 @@ if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
 require('conexiones/conexion.php');
 session_start();
 include_once("sections/sessionStart.php");
+include_once("sections/omega.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">

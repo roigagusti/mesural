@@ -1,5 +1,5 @@
 <?php
-require_once('conexiones/conexion.php');
+require('conexiones/conexion.php');
 $incomingContentType = $_SERVER['CONTENT_TYPE'];
 
 if($incomingContentType != 'application/json'){
@@ -14,7 +14,7 @@ $data = array();
 
 // S'ha afegit deviceType per saber quin tipus de càpsula és i enviar les dades a la taula pertinent !!!
 switch($decoded['deviceType']){
-    case 'Bos':
+    case 'Bos': # Type 01
     	$timeArray = explode(" ",$decoded['datetime']);
 		$mesos = ["Jan"=>"01","Feb"=>"02","Mar"=>"03","Apr"=>"04","May"=>"05","Jun"=>"06","Jul"=>"07","Aug"=>"08","Sep"=>"09","Oct"=>"10","Nov"=>"11","Dec"=>"12"];
 		$time = substr($timeArray[4],0,4)."-".$mesos[$timeArray[1]]."-".$timeArray[2]." ".$timeArray[3];
@@ -31,7 +31,7 @@ switch($decoded['deviceType']){
 			"deviceDate" => $datetime
 		]);
         break;
-    case 'Quar':
+    case 'Quar': # Type 02
     	$deviceID = $database->get("capsuleInfo","id",["deviceKey"=>$decoded['deviceKey']]);
     	$values = $database->insert("capsuleValues_quar", [
 			"deviceID" => $deviceID,
@@ -43,7 +43,7 @@ switch($decoded['deviceType']){
 			"receiveTime" => $decoded['receiveTime']
 		]);
         break;
-    case 'Lep':
+    case 'Lep': # Type 03
 		$json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=0b0db523ef77dbcc29eef7f280e359b2');
 		$obj = json_decode($json);
 		function grados($kelvin){
@@ -73,8 +73,7 @@ switch($decoded['deviceType']){
 		  return $kelvin-273;
 		}
 		$numSensors = $decoded['numSensors'];
-		for ($i=0; $i < $numSensors; $i++) {
-			$dev = $i+1;
+		for ($dev=1; $dev < $numSensors+1; $dev++) {
 
 			$deviceID = $database->get("capsuleInfo","id",["deviceKey"=>$decoded["dev0".$dev]]);
 			$values = $database->insert("capsuleValues_lep", [

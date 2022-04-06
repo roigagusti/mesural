@@ -70,7 +70,7 @@ try {
     $mail->isHTML(true);                                        // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = $body;
-    //$mail->addReplyTo('agusti@mesural.com', 'Agustí de Mesural');
+    $mail->addReplyTo('agusti@mesural.com', 'Agustí de Mesural');
 
     $mail->send();
     header('Location: '.$returnsuccess);

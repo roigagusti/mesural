@@ -1,13 +1,4 @@
 <?php
-// Redirecció a HTTPS
-if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on"){
-  header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
-  exit;
-}
-require('conexiones/conexion.php');
-session_start();
-include_once("sections/sessionStart.php");
-
 function timeDistance($datetime){
   $timestamp = strtotime($datetime);
   $currentTime = time();
@@ -29,7 +20,6 @@ $devices = ['hezije'=>3,'mutite'=>6,'zupone'=>11];
 #'B' => '2022-04-01 16:54:57';
 foreach($devices as $device){
   $lastTimeCapsula = $database->get('capsuleValues_lep', 'createDate',["deviceID"=>$device,"ORDER"=>["createDate"=>"DESC"]]);
-  echo $device.": ".$lastTimeCapsula."<br>";
   $distancia = timeDistance($lastTimeCapsula);
 
   if(generarDades($distancia)){

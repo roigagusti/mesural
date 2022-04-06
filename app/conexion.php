@@ -1,5 +1,9 @@
 <?php
-require  'lib/medoo/medoo.php';
+if(count(explode("/",$_SERVER['REQUEST_URI']))>2){
+	require  '../lib/medoo/medoo.php';
+}else{
+	require  'lib/medoo/medoo.php';
+}
  
 $database = new medoo([
 // required

@@ -158,7 +158,8 @@ include_once("sections/sessionStart.php");
                           "createDate",
                           "temperature",
                           "humidity",
-                          "weatherTemp"
+                          "weatherTemp",
+                          "weatherHumidity"
                           ],["deviceID"=>$_GET['id'],"ORDER"=>["createDate"=>"DESC"]]);
                     ?>
                     
@@ -180,8 +181,9 @@ include_once("sections/sessionStart.php");
                                         <th scope="col" class="text-center">Fecha</th>
                                         <th scope="col" class="text-center">Hora</th>
                                         <th scope="col" class="text-center">Humedad</th>
+                                        <th scope="col" class="text-center">Hum.ext</th>
                                         <th scope="col" class="text-center">Temperatura</th>
-                                        <th scope="col" class="text-center">Exterior</th>
+                                        <th scope="col" class="text-center">Temp.ext</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -189,7 +191,8 @@ include_once("sections/sessionStart.php");
                                 $etiquetas = [];
                                 $datosTemp = [];
                                 $datosHum = [];
-                                $datosExt = [];
+                                $datosText = [];
+                                $datosHext = [];
 
                                 foreach($datas as $data){
                                   $dateCr = explode(" ",$data['createDate']);
@@ -199,12 +202,14 @@ include_once("sections/sessionStart.php");
                                   $etiquetas[] = $data['createDate'];
                                   $datosTemp[] = $data['temperature'];
                                   $datosHum[] = $data['humidity'];
-                                  $datosExt[] = $data['weatherTemp'];
+                                  $datosText[] = $data['weatherTemp'];
+                                  $datosHext[] = $data['weatherHumidity'];
                                 ?>
                                     <tr>
                                         <td class="text-center"><?php echo $dataFecha;?></td>
                                         <td class="text-center"><?php echo $dataHora;?></td>
                                         <td class="text-center"><?php echo number_format($data['humidity'],2,",",".");?> %</td>
+                                        <td class="text-center"><?php echo number_format($data['weatherHumidity'],2,",",".");?> %</td>
                                         <td class="text-center"><?php echo number_format($data['temperature'],2,",",".");?> º</td>
                                         <td class="text-center"><?php echo number_format($data['weatherTemp'],2,",",".");?> º</td>
                                     </tr>
@@ -215,7 +220,8 @@ include_once("sections/sessionStart.php");
                                     "etiquetas" => $etiquetas,
                                     "datosTemp" => $datosTemp,
                                     "datosHum" => $datosHum,
-                                    "datosExt" => $datosExt                                 
+                                    "datosText" => $datosText,  
+                                    "datosHext" => $datosHext                          
                                 ];
                                 $chart = json_encode($respuesta);
                                 ?>
@@ -265,7 +271,8 @@ include_once("sections/sessionStart.php");
     const etiquetas = dades.etiquetas;
     const datosTemp = dades.datosTemp;
     const datosHum = dades.datosHum;
-    const datosExt = dades.datosExt;
+    const datosText = dades.datosText;
+    const datosHext = dades.datosHext;
 
     var options = {
       chart: {
@@ -277,7 +284,7 @@ include_once("sections/sessionStart.php");
         }
       },
       stroke: {
-        width: [2, 4, 2],
+        width: [2, 4, 2, 2],
         curve: "smooth"
       },
       plotOptions: {
@@ -285,7 +292,7 @@ include_once("sections/sessionStart.php");
           columnWidth: "30%"
         }
       },
-      colors: ["#f1b44c","#bd574e", "#dfe2e6"],
+      colors: ["#f1b44c","#bd574e","#dfe2e6","#dfe2e6"],
       series: [{
         name: "Humedad",
         type: "line",
@@ -295,12 +302,16 @@ include_once("sections/sessionStart.php");
         type: "line",
         data: datosTemp
       }, {
-        name: "Exterior",
+        name: "Hum.ext",
+        type: "line",
+        data: datosHext
+      }, {
+        name: "Temp.ext",
         type: "area",
-        data: datosExt
+        data: datosText
       }],
       fill: {
-        opacity: [1, 1, .45],
+        opacity: [1, 1, .45, .45],
         gradient: {
           inverseColors: !1,
           shade: "light",

@@ -46,6 +46,10 @@ include_once("sections/languages.php");
 
       <form class="form-signin" action="conexiones/validar_usuario.php?lang=<?php echo $text['lang']; ?>" method="post">
       <div class="login-input">
+        <?php
+          $callback = str_replace("#","%23",$_GET['callback']);
+          if(isset($_GET['callback'])){echo '<input type="hidden" id="callback" name="callback" value="'.$callback.'">';}
+        ?>
         <label for="email"><?php echo $text['Email']; ?></label>
         <input type="text" id="email" name="email" placeholder="gavin@hooli.com" required>
         <label for="password"><div class="label-pass"><?php echo $text['Password']; ?></div><div class="label-forgot"><a href="forgot.php"><?php echo $text['Forgot']; ?></a></div></label>

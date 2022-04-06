@@ -8,11 +8,11 @@ if(count(explode("/",$_SERVER['REQUEST_URI']))>2){
 $database = new medoo([
 // required
 'database_type' => 'mysql',
-'database_name' => 'mesural',
-'server' => '127.0.0.1',
-'username' => 'root',
-'password' => 'root',
+'database_name' => 'cuantiemesural',
+'server' => 'cuantiemesural.mysql.db',
+'username' => 'cuantiemesural',
+'password' => 'Meencha22',
 'charset' => 'utf8',
-'port' => '3307'
+'port' => '3306'
 ]);
 ?>

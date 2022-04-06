@@ -15,6 +15,10 @@ if(isset($_SESSION['user_name'])) {
   include_once("languages.php");
 //Si no hi ha sessió redirigir a Login
 }else{
-    header('Location: login.php');
+  $callback = $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
+  $callback = str_replace("#","$23",$callback);
+  $callback = str_replace("&","$26",$callback);
+  $callback = str_replace("?","$3F",$callback);
+  header('Location: login.php?callback=https://'.$callback);
 }
 ?>

@@ -34,7 +34,7 @@ if(count($lep)>0){
                         $temp = $database->get('capsuleValues_lep','temperature',['deviceID'=>$capsula['deviceID'],"ORDER"=>["createDate"=>"DESC"]]);
                         $hum = $database->get('capsuleValues_lep','humidity',['deviceID'=>$capsula['deviceID'],"ORDER"=>["createDate"=>"DESC"]]);
                         $date = $database->get("capsuleValues_lep", "createDate", ["deviceID"=>$capsula['deviceID'],"ORDER"=>["createDate"=>"DESC"]]);
-                        $capsulaFrequency = ($frequency+2)*60;
+                        $capsulaFrequency = ($frequency+30)*60;
                         
                         if(strlen($temp)<1){$temp=0.0;}
                         if(strlen($hum)<1){$hum=0.0;}

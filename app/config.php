@@ -123,6 +123,7 @@ include_once("sections/sessionStart.php");
                     <div class="col-md-12">
                       <ul class="dadesConfig">
                         <li><div class="row"><div class="dadesTitles">Clave pública</div> <div class="dadesFacturacio"><?php echo $apiKey;?></div></div></li>
+                        <li><div class="row"><div class="dadesTitles">Email hash</div> <div class="dadesFacturacio"><?php echo hash('sha256',$userEmail);?></div></div></li>
                       </ul>
                     </div>
                   </div>

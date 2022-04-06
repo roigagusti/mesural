@@ -97,7 +97,7 @@ function dateDistance($datetime){
                   "deviceType",
                   "createDate",
                   "frequency"
-                  ],["ORDER"=>["id"=>"DESC"]]);
+                  ],["ORDER"=>["id"=>"ASC"]]);
                 ?>
 
                 <div class="table-responsive" style="min-height:300px">
