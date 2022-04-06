@@ -4,7 +4,7 @@ if(count(explode("/",$_SERVER['REQUEST_URI']))>2){
 }else{
 	require  'lib/medoo/medoo.php';
 }
- 
+
 $database = new medoo([
 // required
 'database_type' => 'mysql',
