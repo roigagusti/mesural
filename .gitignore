@@ -2,11 +2,11 @@
 *.log
 
 # ignore ALL files in ANY directory named ...
-/api/conexiones/conexion.php
-/app/capsule/omega.php
-/app/conexiones/conexion.php
-/app/conexiones/payment.php
-/app/conexiones/sendmail.php
-/app/sections/omega.php
-/www/conexiones/conexion.php
-/mesural.com.code-workspace
+api/conexiones/conexion.php
+app/capsule/omega.php
+app/conexiones/conexion.php
+app/conexiones/payment.php
+app/conexiones/sendmail.php
+app/sections/omega.php
+www/conexiones/conexion.php
+mesural.com.code-workspace
