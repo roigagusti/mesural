@@ -159,7 +159,8 @@ include_once("sections/sessionStart.php");
                           "temperature",
                           "humidity",
                           "weatherTemp",
-                          "weatherHumidity"
+                          "weatherHumidity",
+                          "weatherMain"
                           ],["deviceID"=>$_GET['id'],"ORDER"=>["createDate"=>"DESC"]]);
                     ?>
                     
@@ -184,6 +185,7 @@ include_once("sections/sessionStart.php");
                                         <th scope="col" class="text-center">Hum.ext</th>
                                         <th scope="col" class="text-center">Temperatura</th>
                                         <th scope="col" class="text-center">Temp.ext</th>
+                                        <th scope="col" class="text-center">Clima</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -212,6 +214,7 @@ include_once("sections/sessionStart.php");
                                         <td class="text-center"><?php echo number_format($data['weatherHumidity'],2,",",".");?> %</td>
                                         <td class="text-center"><?php echo number_format($data['temperature'],2,",",".");?> º</td>
                                         <td class="text-center"><?php echo number_format($data['weatherTemp'],2,",",".");?> º</td>
+                                        <td class="text-center"><?php echo $data['weatherMain'];?></td>
                                     </tr>
 
                                 <?php
