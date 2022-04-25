@@ -1,5 +1,5 @@
 <?php
-require_once('conexiones/conexiones.php');
+require_once('conexiones/conexion.php');
 $incomingContentType = $_SERVER['CONTENT_TYPE'];
 
 if($incomingContentType != 'application/json'){
