@@ -72,7 +72,7 @@ include_once("sections/sessionStart.php");
             'devicePlace',
             'deviceUse',
             'createDate',
-          ],["deviceID"=>$_GET['id']]
+          ],["AND"=>["deviceID"=>$_GET['id'], "userID"=>$id]]
         );
         $deviceKey = $database->get('capsuleInfo', 'deviceKey', ["id"=>$capsula['deviceID']]);
         $frequency = $database->get('capsuleInfo', 'frequency', ["id"=>$capsula['deviceID']]);

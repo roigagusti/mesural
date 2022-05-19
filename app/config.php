@@ -78,6 +78,16 @@ include_once("sections/sessionStart.php");
                         <li><div class="row"><div class="dadesTitles">Contraseña</div> <div class="dadesFacturacio">********</div></div></li>
                         <li><div class="row"><div class="dadesTitles">Idioma</div> <div class="dadesFacturacio">Español</div></div></li>
                         <br>
+                        <?php if($accountType==0){?>
+                        <form method="post" action="config.php" >
+                          <?php if($_POST['omegaUpdate']==1){if(isset($_POST['omega'])){$a=1;}else{$a=0;}$editOmega=$database->update("users",["omega"=>$a],['id'=>$id]);header('Location: URL');}?>
+                          <li><div class="row"><div class="dadesTitles">Omega
+                          <input type="hidden" name="omegaUpdate" value="1">
+                          <input class="form-check-input" type="checkbox" value="" id="omega" name="omega" style="margin-left:20px"<?php if($omegaUser==1){echo " checked";}?>></div></div></li>
+                          <br><button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                        <br><br>
+                        <?php } ?>
                         <li><a data-toggle="modal" data-target="#editProfile" style="cursor:pointer;color:#bd574e">Cambiar configuración</a></li>
                       </ul>
                     </div>

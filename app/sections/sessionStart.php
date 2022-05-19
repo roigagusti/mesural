@@ -10,6 +10,7 @@ if(isset($_SESSION['user_name'])) {
   $userEmail = $_SESSION['user_name'];
   $userName = $database->get("users","nom",["id"=>$id]);
   $accountType = $database->get("users","type",["id"=>$id]);
+  $omegaUser = $database->get("users","omega",["id"=>$id]);
 
   $userLang = $database->get("users","language",["id"=>$userId]);
   include_once("languages.php");
