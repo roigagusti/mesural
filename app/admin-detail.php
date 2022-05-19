@@ -79,51 +79,157 @@ include_once("sections/sessionStart.php");
 
         <div class="row mb-4">
           <div class="col-xl-4 col-sm-12">
-              <div class="card">
-                  <div class="card-body">
-                      <div class="text-center">
-                          <div class="dropdown float-right">
-                              <a class="text-body dropdown-toggle font-size-18" href="#" role="button" data-toggle="dropdown" aria-haspopup="true">
-                                <i class="uil uil-ellipsis-v"></i>
-                              </a>
+            <div class="card">
+              <div class="card-body">
+                <div class="text-center">
+                  <div class="dropdown float-right">
+                    <a class="text-body dropdown-toggle font-size-18" href="#" role="button" data-toggle="dropdown" aria-haspopup="true">
+                      <i class="uil uil-ellipsis-v"></i>
+                    </a>
                             
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" data-toggle="modal" data-target="#editCapsule" style="cursor:pointer;">Editar cápsula</a>
-                                  <a class="dropdown-item text-danger" data-toggle="modal" data-target="#removeCapsule" style="cursor:pointer;">Borrar cápsula</a>
-                              </div>
-                          </div>
-                          <div class="clearfix"></div>
-                          <div class="mx-auto">
-                            <img src="https://chart.googleapis.com/chart?chs=230x230&cht=qr&chl=https%3A%2F%2Fapp.mesural.com%2Findex.php%3FdeviceKey%3D<?php echo $capsula['deviceKey'];?>%23addCapsule"/>
-                          </div>
-                          <p class="text-muted">Mesural <?php echo $types[$capsula['deviceType']-1];?></p>
-                      </div>
-
-                      <hr class="my-4">
-
-                      <div class="text-muted">
-                          <div class="table-responsive mt-4">
-                              <div>
-                                  <p class="mb-1">Device key:</p>
-                                  <h5 class="font-size-16"><?php echo $capsula['deviceKey'];?></h5>
-                              </div>
-                              <div>
-                                  <p class="mb-1">MAC:</p>
-                                  <h5 class="font-size-16"><?php echo $mac;?></h5>
-                              </div>
-                              <div>
-                                  <p class="mb-1">Frecuencia de lectura:</p>
-                                  <h5 class="font-size-16"><?php echo $capsula['frequency'].' minutos';?></h5>
-                              </div>
-                          </div>
-                      </div>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" data-toggle="modal" data-target="#editCapsule" style="cursor:pointer;">Editar cápsula</a>
+                      <a class="dropdown-item text-danger" data-toggle="modal" data-target="#removeCapsule" style="cursor:pointer;">Borrar cápsula</a>
+                    </div>
                   </div>
+                  <div class="clearfix"></div>
+                  <div class="mx-auto">
+                    <img src="https://chart.googleapis.com/chart?chs=230x230&cht=qr&chl=https%3A%2F%2Fapp.mesural.com%2Findex.php%3FdeviceKey%3D<?php echo $capsula['deviceKey'];?>%23addCapsule"/>
+                  </div>
+                  <p class="text-muted">Mesural <?php echo $types[$capsula['deviceType']-1];?></p>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="text-muted">
+                  <div class="table-responsive mt-4">
+                    <div>
+                      <p class="mb-1">Device key:</p>
+                      <h5 class="font-size-16"><?php echo $capsula['deviceKey'];?></h5>
+                    </div>
+                    <div>
+                      <p class="mb-1">MAC:</p>
+                      <h5 class="font-size-16"><?php echo $mac;?></h5>
+                    </div>
+                    <div>
+                      <p class="mb-1">Frecuencia de lectura:</p>
+                      <h5 class="font-size-16"><?php echo $capsula['frequency'].' minutos';?></h5>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
               
-              <div class="d-print-none mt-4 mb-4">
-                  <a href="admin.php" class="btn btn-link text-muted">
-                      <i class="uil uil-arrow-left mr-1"></i> Volver a Cápsulas
-                  </a>
+            <div class="d-print-none mt-4 mb-4">
+              <a href="admin.php" class="btn btn-link text-muted">
+                <i class="uil uil-arrow-left mr-1"></i> Volver a Cápsulas
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-8">
+              <div class="card mb-0">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#chart" role="tab">
+                              <i class="uil uil-chart-down font-size-20"></i>
+                              <span class="d-none d-sm-block">Gráficos</span> 
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#list" role="tab">
+                              <i class="uil uil-list-ui-alt font-size-20"></i>
+                              <span class="d-none d-sm-block">Lista</span> 
+                          </a>
+                      </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content p-4">
+                    <?php
+                      $datas = $database->select("capsuleValues_lep", [
+                          "deviceID",
+                          "createDate",
+                          "temperature",
+                          "humidity",
+                          "weatherTemp",
+                          "weatherHumidity",
+                          "weatherMain"
+                          ],["deviceID"=>$_GET['id'],"ORDER"=>["createDate"=>"DESC"]]);
+                    ?>
+                    
+                    <!-- CHART -->
+                    <div class="tab-pane" id="chart">
+                      <?php if(count($datas)==0){echo "No hay datos para esta cápsula.";}else{?>
+                        <div id="sales-analytics-chart" class="apex-charts" dir="ltr"></div>
+                      <?php } ?>
+                    </div>
+
+                    <!-- LLISTA -->
+                    <div class="tab-pane active" id="list">
+                      <?php if(count($datas)==0){echo "No hay datos para esta cápsula.";}else{?>
+                      <div class="tab-pane">
+                        <div class="table-responsive">
+                            <table class="table table-nowrap table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">Fecha</th>
+                                        <th scope="col" class="text-center">Hora</th>
+                                        <th scope="col" class="text-center">Humedad</th>
+                                        <th scope="col" class="text-center">Hum.ext</th>
+                                        <th scope="col" class="text-center">Temperatura</th>
+                                        <th scope="col" class="text-center">Temp.ext</th>
+                                        <th scope="col" class="text-center">Clima</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                $etiquetas = [];
+                                $datosTemp = [];
+                                $datosHum = [];
+                                $datosText = [];
+                                $datosHext = [];
+
+                                foreach($datas as $data){
+                                  $dateCr = explode(" ",$data['createDate']);
+                                  $dataFecha = $dateCr[0];
+                                  $dataHora = $dateCr[1];
+
+                                  $etiquetas[] = $data['createDate'];
+                                  $datosTemp[] = $data['temperature'];
+                                  $datosHum[] = $data['humidity'];
+                                  $datosText[] = $data['weatherTemp'];
+                                  $datosHext[] = $data['weatherHumidity'];
+                                ?>
+                                    <tr>
+                                        <td class="text-center"><?php echo $dataFecha;?></td>
+                                        <td class="text-center"><?php echo $dataHora;?></td>
+                                        <td class="text-center"><?php echo number_format($data['humidity'],2,",",".");?> %</td>
+                                        <td class="text-center"><?php echo number_format($data['weatherHumidity'],2,",",".");?> %</td>
+                                        <td class="text-center"><?php echo number_format($data['temperature'],2,",",".");?> º</td>
+                                        <td class="text-center"><?php echo number_format($data['weatherTemp'],2,",",".");?> º</td>
+                                        <td class="text-center"><?php echo $data['weatherMain'];?></td>
+                                    </tr>
+
+                                <?php
+                                }
+                                $respuesta = [
+                                    "etiquetas" => $etiquetas,
+                                    "datosTemp" => $datosTemp,
+                                    "datosHum" => $datosHum,
+                                    "datosText" => $datosText,  
+                                    "datosHext" => $datosHext                          
+                                ];
+                                $chart = json_encode($respuesta);
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      <?php }?>
+                    </div>
+
+                  </div>
               </div>
           </div>
         </div>   
