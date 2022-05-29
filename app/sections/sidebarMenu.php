@@ -6,7 +6,7 @@
                 <img src="img/mesural_light-sm.png" alt="" style="height:40px;margin-left:5px">
             </span>
             <span class="logo-lg">
-                <img src="img/mesural_light.png" alt="" style="height:25px;">
+                <img src="img/logo-light.png" alt="" style="height:25px;">
             </span>
         </a>
 
@@ -15,7 +15,7 @@
                 <img src="img/mesural_light-sm.png" alt="" style="height:40px;margin-left:5px">
             </span>
             <span class="logo-lg">
-                <img src="img/mesural_light.png" alt="" style="height:25px;">
+                <img src="img/logo-light.png" alt="" style="height:25px;">
             </span>
         </a>
     </div>

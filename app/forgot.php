@@ -35,7 +35,7 @@ include_once("sections/languages.php");
 <div class="content">
   <div class="franja-central">
     <div class="logo">
-      <a href="//www.mesural.com"><img src="img/mesural.png" /></a>
+      <a href="//www.mesural.com"><img src="img/logo-light.png" /></a>
     </div>
 
 
