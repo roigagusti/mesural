@@ -1,2 +1,2 @@
-# Mesural inc.
+# Mesural.
 www.mesural.com
